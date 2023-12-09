@@ -5,7 +5,7 @@ import "../styles/Contact.scss";
 function Contact() {
   return (
     <div className="welcome">
-      <div>hello</div>
+      <div>hevvllo</div>
     </div>
   );
 }
