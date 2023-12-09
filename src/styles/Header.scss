@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Dancing+Script&family=Kanit:wght@500&family=Poppins&display=swap");
+
+.header {
+  padding: 0rem;
+
+  .header-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2rem;
+  }
+
+  .header-left {
+    position: relative;
+    top: 20rem;
+    left: 5rem
+  }
+  .header-left h1 span {
+    color: rgb(142, 0, 46);
+    color: linear-gradient(0deg, rgba(142, 0, 46, 1) 0%, rgba(0, 0, 0, 1) 84%);
+    font-weight: 900;
+    font-size: 3rem;
+    font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+  }
+
+  .header-left h3 {
+    text-transform: capitalize;
+    margin: 0.5rem 0;
+    font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .header-left p {
+    margin: 1.5rem 0 3rem;
+    width: 80%;
+    font-style: italic;
+    font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .btn {
+    display: inline-block;
+    width: fit-content;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(
+      90deg,
+      rgba(142, 0, 46, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    color: antiquewhite;
+    padding: 0.9rem 3rem;
+    border: 1px solid hsl(0, 0%, 22%);
+    border-radius: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .btn:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    color: rgb(146, 122, 122);
+  }
+
+  .header-btns {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .header-right {
+    margin-top: 20rem;
+  }
+
+  .profile {
+    width: 80%;
+    border-radius: 48% 48% 2rem 2rem;
+    border: 0.7rem solid hsl(240, 2%, 13%);
+    box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+.header {
+  body {
+    font-size: 1rem;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  section {
+    padding: 8rem 0;
+  }
+
+  .title {
+    width: 70%;
+    margin: 0 auto 5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+}
+}
