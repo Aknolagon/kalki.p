@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Dancing+Script&family=Kanit:wght@500&family=Poppins&display=swap");
+
+.about-me {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 2rem;
+padding-bottom: 6rem;
+
+.heading {
+    font-size: 3.3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+        font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+}
+
+span {
+ color: rgb(142, 0, 46);
+    color: linear-gradient(0deg, rgba(142, 0, 46, 1) 0%, rgba(0, 0, 0, 1) 84%);
+}
+
+.about-img {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 90%;
+     border-radius: 50%;
+     height:90%;
+     border: .2rem solid rgb(142, 0, 46);
+}
+
+.about-img .circle-spin {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border-top: .2rem solid transparent;
+    border-bottom: .2rem solid transparent;
+    border-left: .2rem solid rgb(142, 0, 46);
+    border-right: .2rem solid rgb(142, 0, 46);
+
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content h3 {
+    font-size: 2rem;
+        font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    margin: 2rem 0 3rem;
+        font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+}
+
+  .btns {
+    display: inline-block;
+    width: fit-content;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(
+      90deg,
+      rgba(142, 0, 46, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    color: antiquewhite;
+    padding: 0.9rem 3rem;
+    border: 1px solid hsl(0, 0%, 22%);
+    border-radius: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .btns:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    color: rgb(146, 122, 122);
+  }
+
+}

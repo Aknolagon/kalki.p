@@ -1,15 +1,17 @@
 import "../styles/Header.scss";
-import Profile from "../assets/Profile2.jpg";
+import Profile from "../assets/Profile3.jpg";
 
 function Header() {
   return (
     <section className="header">
+
+      {/* desktop */}
       <div className="container header-container">
         <div className="header-left">
           <h1>
-            Hi I am <span>Prasanna KALKI</span>
+            Hi, I am <span>Prasanna KALKI</span>
           </h1>
-          <h3>A Web and Web Mobile Developer</h3>
+          <h3 className="text-animate">A Web and Web Mobile Developer</h3>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
@@ -22,14 +24,19 @@ function Header() {
             PageMaker including versions of Lorem Ipsum.
           </p>
           <div className="header-btns">
-            <button className="btn">Hire Me</button>
-            <button className="btn">My Works</button>
+            <button className="btn">Here my CV</button>
+            <button className="btn">Here my Works</button>
           </div>
         </div>
         <div className="header-right">
           <img className="profile" src={Profile} alt="profile" />
         </div>
       </div>
+
+{/* Mobile version */}
+
+
+
     </section>
   );
 }
