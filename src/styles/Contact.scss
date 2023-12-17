@@ -1,0 +1,95 @@
+.contact{
+padding-bottom: 0;
+
+.contact-container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.heading {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    margin-top: 15rem;
+    text-align: center;
+    text-decoration: none;
+        font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+}
+
+  h2.heading {
+  color: rgb(102, 2, 34);
+color: linear-gradient(0deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
+  }
+  .heading span {
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 2.8rem;
+  }
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.contact-form .form-name {
+display: flex;
+gap: 1.2rem;
+}
+
+.contact-form input[type= "text"] {
+    width: 50%;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    border:1px solid hsl(0, 0%, 22%);
+     background:  antiquewhite;
+    color:black;
+         font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+.contact-form .btn {
+    display: inline-block;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 1rem;
+    background: linear-gradient(
+      90deg,
+      rgba(142, 0, 46, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    color: antiquewhite;
+    padding: 0.9rem 6rem;
+    border: 1px solid hsl(0, 0%, 22%);
+    border-radius: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .btn:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    color: rgb(146, 122, 122);
+  }
+
+  .copyright {
+    margin-top: 5rem;
+    padding: .5rem 0;
+    text-align: center;
+    background: rgb(102, 2, 34);
+background: linear-gradient(0deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
+color: antiquewhite;
+ font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+  }
+}

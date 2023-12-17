@@ -1,10 +1,9 @@
-import "../styles/Work.scss";
+import "../styles/MyProjects.scss";
 // import "../components/NavBar.scss";
-// import Logo from "../assets/LOGO.png";
 
 function Work() {
   return (
-    <div className="welcome">
+    <div className="projects">
       <div>hello</div>
     </div>
   );

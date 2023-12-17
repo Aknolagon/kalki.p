@@ -1,27 +1,28 @@
 import "../styles/Skills.scss";
-import css from "../assets//skills/css.png";
-import javascript from "../assets//skills/javascript.png";
-import html from "../assets//skills/html.png";
-import expressjs from "../assets//skills/expressjs.jpg";
-import mysql from "../assets//skills/mysql.svg";
-import sass from "../assets//skills/sass.svg";
+import { skillsData } from "../constant/data";
 
 function Skills() {
   return (
     <section className="skills">
-        <h1>Skills</h1>
-<div>
-    <div>
-        <h2>Front-End</h2><img className="skills-img" src={css} alt="skills" />
-    <img className="skills-img" src={html} alt="skills" />
-    <img className="skills-img" src={javascript} alt="skills" />
-    <img className="skills-img" src={sass} alt="skills" /></div>
-    <h2>Back-End</h2>
-    <img className="skills-img" src={mysql} alt="skills" />
-    <img className="skills-img" src={expressjs} alt="skills" />
-</div>
+      <div className="heading">
+        <h1>
+          Skills
+        </h1>
+      </div>
+      <div className="contents">
+        <ul className="skills-set">
+          {skillsData.map((skill) => (
+            <div className="skill-item" key={skill.id}>
+              <img src={skill.img} alt={skill.title} />
+              <p>{skill.title}</p>
+            </div>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }
+
+
 
 export default Skills;

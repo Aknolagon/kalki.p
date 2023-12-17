@@ -1,19 +1,39 @@
 import "../styles/AboutMe.scss";
 // import "../components/NavBar.scss";
-import About from "../assets/Profile2.jpg";
+import About from "../assets/Profile.webp";
 
 function AboutMe() {
   return (
-    <section className="about-me" id="about">
-      <h2 className="heading">About <span>Me</span></h2>
-<div className="about-img">
-  <img src={About} alt="about" />
-  <span className="circle-spin"></span>
-</div>
+    <section className="about-me">
+      <h2 className="heading">
+        À Propos
+      </h2>
+      <div className="about-content">
+        <div className="about-left">
+          <div className="about-header">
+            <img src={About} alt="Prasanna" className="user-avatar" />
+            <div className="username">Aknolagon</div>
+          </div>
+          <img src={About} alt="photo" className="about-image" />
+          <div className="about-caption">
+            <span>Aknolagon:</span> Développeur Web disponible :D
+          </div>
+          <div className="about-actions">
+            <div className="about-action">
+              <span className="about-like">❤</span> J&apos;aime
+            </div>
+            <button className="btns">
+              <a>Voici mon CV</a>
+            </button>
+            <div className="about-action">
+              <span className="about-comment">💬</span> Commenter
+            </div>
+          </div>
+        </div>
 
-<div className="about-content">
-<h3>Front-End And Back-End Developer!</h3>
- <p>
+        <div className="about-right">
+          <h3 className="text-animate">Front-End et Back-End Développeur!</h3>
+          <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -24,10 +44,8 @@ function AboutMe() {
             and more recently with desktopqdd publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
-</div>
-          <div className="btn-box">
-            <button className="btns"><a>Read More</a></button>
-          </div>
+        </div>
+      </div>
     </section>
   );
 }

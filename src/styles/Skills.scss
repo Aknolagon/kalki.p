@@ -1,9 +1,100 @@
 .skills {
 
-    .skills-img {
-    width: 10%;
-    border-radius: 48% 48% 2rem 2rem;
-    border: 0.7rem solid hsl(240, 2%, 13%);
-    box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+.heading {
+  margin-top: 10rem;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-decoration: none;
+        font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+     color: rgb(102, 2, 34);
+color: linear-gradient(0deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
+}
+
+  .heading span {
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 3.2rem;
+  }
+
+  .divider {
+    height: 110px;
+    text-align: center;
+    background-image: url(/src/assets/skills/dekstop-divider.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: 768px) {
+    .divider {
+      margin: 0;
+      width: 100%;
+      background-image: url(/src/assets/skills/dekstop-divider.svg);
+      background-size: 100%;
+    }
+  }
+
+  .contents {
+    margin: 5rem 0;
+    .skills-set {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-right: 3rem;
+      
+      p {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+             font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+      }
+
+      img {
+        width: 100px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .section-title {
+        text-align: start;
+      }
+
+      .skills-set {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1080px) {
+      .skills-set {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    .skill-item {
+      border-radius: 2rem;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.2),
+    -10px -10px 15px -5px rgba(255, 255, 255, 0.1);
+    color: antiquewhite;
+ background:  rgba(142,0,46,1);
+background: linear-gradient(50deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
+    }
+
+    .skill-item:hover {
+      box-shadow: inset 10px 10px 15px -3px rgba(0, 0, 0, 0.2),
+    inset -10px -10px 15px -5px rgba(255, 255, 255, 0.1);
+    }
+
+    .skill-item:hover {
+      transform: scale(1.1);
+        transition: transform ease-in 300ms;
+    // transition: all 0.5s ease;
+    color: rgb(146, 122, 122);
+    }
   }
 }

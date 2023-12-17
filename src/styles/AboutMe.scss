@@ -1,71 +1,145 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Dancing+Script&family=Kanit:wght@500&family=Poppins&display=swap");
 
 .about-me {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-gap: 2rem;
-padding-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 6rem;
 
 .heading {
     font-size: 3.3rem;
+    margin-top: 10rem;
     margin-bottom: 3rem;
     text-align: center;
+    text-decoration: none;
         font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
 }
 
-span {
- color: rgb(142, 0, 46);
-    color: linear-gradient(0deg, rgba(142, 0, 46, 1) 0%, rgba(0, 0, 0, 1) 84%);
+  h2.heading {
+  color: rgb(102, 2, 34);
+color: linear-gradient(0deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
+  }
+  .heading span {
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 3rem;
+  }
+
+  .about-content {
+  display: flex;
+  gap: 2rem;
 }
 
-.about-img {
+
+.about-left {
+  max-width: 600px;
+  margin-left: 5rem;
+  background-color: antiquewhite;
+  border: 1px solid antiquewhite;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.about-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+}
+
+.about-caption {
+  padding: 10px;
+}
+
+.about-caption span {
+font-weight: bold;
+}
+
+.about-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-top: 1px solid #e1e1e1;
+}
+
+.about-action {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.about-like {
+  color: rgb(142, 0, 46)
+}
+
+.about-comment {
+  color: #262626;
+}
+
+
+.about-right {
     position: relative;
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: 10rem;
 }
 
-.about-img img {
-    width: 90%;
-     border-radius: 50%;
-     height:90%;
-     border: .2rem solid rgb(142, 0, 46);
-}
+  .about-right .text-animate {
+    position: relative;
+    width: 32.8rem;
+  }
 
-.about-img .circle-spin {
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0);
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    border-top: .2rem solid transparent;
-    border-bottom: .2rem solid transparent;
-    border-left: .2rem solid rgb(142, 0, 46);
-    border-right: .2rem solid rgb(142, 0, 46);
-
-}
-
-.about-content {
-    text-align: center;
-}
-
-.about-content h3 {
-    font-size: 2rem;
-        font-family: "Kanit", sans-serif;
+.about-right h3 {
+    text-transform: capitalize;
+    margin: 0.5rem 0;
+    font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
+    font-size: 2.8rem;
+    font-weight:700;
+    color:transparent;
+    -webkit-text-stroke: .7px rgb(6, 6, 6);
+    background-image: linear-gradient(0deg, rgba(142, 0, 46, 1) 0%, rgba(0, 0, 0, 1) 84%);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -33rem 0;
+    animation: homebgText 6s linear infinite;
+    animation-delay: 2s;
 }
 
-.about-content p {
+    .about-right h3::before {
+      content: '';
+      position: absolute;
+      top:0;
+      left:0;
+      width: 0;
+      height: 100%;
+      border-right: 2px solid rgba(142, 0, 46, 1);
+      z-index: -1;
+      animation: homeCursorText 6s linear infinite;
+    animation-delay: 2s;
+    }
+
+
+
+.about-right p {
     font-size: 1.1rem;
     margin: 2rem 0 3rem;
+    margin-right: 2rem;
         font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
 }
@@ -90,6 +164,7 @@ span {
     transition: all 0.5s ease;
     font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
+    margin-left: 1rem;
   }
 
   .btns:hover {
@@ -98,4 +173,27 @@ span {
     color: rgb(146, 122, 122);
   }
 
+    //keyframes
+  @keyframes homebgText {
+    0%,10%,100% {
+background-position: -33rem 0;
+
+    }
+
+    65%, 85% {
+      background-position: 0 0;
+    }
+  }
+
+    @keyframes homeCursorText {    0%,10%, 100% {
+width: 0;
+    }
+
+    65%, 78%, 85% {  width: 100%;
+      opacity: 1;  }
+
+    75%, 81% {
+      opacity: 0;
+    }
+  }
 }

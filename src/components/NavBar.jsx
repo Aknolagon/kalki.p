@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/NavBar.scss";
 import { RiInstagramFill, RiLinkedinFill, RiGithubFill } from 'react-icons/ri';
-import Logo from "../assets/Logo.png"
+import Logo from "../assets/Logo.webp"
 
 function NavBar() {
 
@@ -13,19 +13,19 @@ function NavBar() {
         </a>
         <ul className="navlist">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Accueil</Link>
           </li>
           <li>
-            <Link to="/aboutme">About Me</Link>
-          </li>
-          <li>
-            <Link to="/work">Work</Link>
+            <Link to="/aboutme">À propos</Link>
           </li>
           <li>
             <Link to="/skills">Skills</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/work">Mes Projets</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contacter</Link>
           </li>
         </ul>
         <div className="social-links">

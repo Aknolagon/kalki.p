@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 import AboutMe from "./AboutMe";
 import Skills from "./Skills";
+import Contact from "./Contact";
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <Header />
     <AboutMe />
     <Skills />
+    <Contact />
     </main>
   );
 }
