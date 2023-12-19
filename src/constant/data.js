@@ -92,6 +92,6 @@ export const projetsData = [
     title: "Portfolio (Fini)",
     text: "Projet Front-End (HTML, SASS, JS, ReactJs)",
     url: "in progress",
-    github: "in progress",
+    github: "https://github.com/Aknolagon/projet-portfolio.git",
   },
 ];

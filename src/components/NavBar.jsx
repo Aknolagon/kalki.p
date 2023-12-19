@@ -12,19 +12,29 @@ function NavBar() {
         </a>
         <ul className="navlist">
           <li>
-            <Link to="/">Accueil</Link>
+            <Link to="/" className="active">
+              Accueil
+            </Link>
           </li>
           <li>
-            <Link to="/aboutme">À propos</Link>
+            <Link to="/aboutme" className="active">
+              À propos
+            </Link>
           </li>
           <li>
-            <Link to="/skills">Skills</Link>
+            <Link to="/skills" className="active">
+              Skills
+            </Link>
           </li>
           <li>
-            <Link to="/work">Mes Projets</Link>
+            <Link to="/projects" className="active">
+              Mes Projets
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contacter</Link>
+            <Link to="/contact" className="active">
+              Me Contacter
+            </Link>
           </li>
         </ul>
         <div className="social-links">

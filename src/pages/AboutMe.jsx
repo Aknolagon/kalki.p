@@ -1,13 +1,10 @@
 import "../styles/AboutMe.scss";
-// import "../components/NavBar.scss";
 import About from "../assets/Profile.webp";
 
 function AboutMe() {
   return (
     <section className="about-me">
-      <h2 className="heading">
-        À Propos
-      </h2>
+      <h2 className="heading">À Propos</h2>
       <div className="about-content">
         <div className="about-left">
           <div className="about-header">
@@ -23,7 +20,12 @@ function AboutMe() {
               <span className="about-like">❤</span> J&apos;aime
             </div>
             <button className="btns">
-              <a>Voici mon CV</a>
+              <a
+                href="/src/assets/Kalki_Prasanna.pdf"
+                download="CV_KALKI_Prasanna.pdf"
+              >
+                Voici mon CV
+              </a>
             </button>
             <div className="about-action">
               <span className="about-comment">💬</span> Commenter

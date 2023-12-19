@@ -1,10 +1,10 @@
 import "../styles/Header.scss";
 import Profile from "../assets/Profile3.webp";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <section className="header">
-
       {/* desktop */}
       <div className="container header-container">
         <div className="header-left">
@@ -24,8 +24,17 @@ function Header() {
             PageMaker including versions of Lorem Ipsum.
           </p>
           <div className="header-btns">
-            <button className="btn">Mon CV</button>
-            <button className="btn">Mes Projets</button>
+            <button className="btn">
+              <a
+                href="/src/assets/Kalki_Prasanna.pdf"
+                download="CV_KALKI_Prasanna.pdf"
+              >
+                Mon CV
+              </a>
+            </button>
+            <button className="btn">
+              <Link to="/projects">Mes Projets</Link>
+            </button>
           </div>
         </div>
         <div className="header-right">
@@ -33,10 +42,7 @@ function Header() {
         </div>
       </div>
 
-{/* Mobile version */}
-
-
-
+      {/* Mobile version */}
     </section>
   );
 }

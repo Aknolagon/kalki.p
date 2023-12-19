@@ -97,12 +97,20 @@
     transition: all 0.5s ease;
     font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
+    text-decoration: none;
+  }
+
+  a {
+     color: antiquewhite;
+  text-decoration: none;
   }
 
   .btn:hover {
     transform: scale(1.1);
     transition: all 0.5s ease;
     color: rgb(146, 122, 122);
+        text-decoration: none;
+    list-style: none;
   }
 
   .header-btns {

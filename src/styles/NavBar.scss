@@ -71,7 +71,8 @@ font-family: 'Poppins', sans-serif;
     text-decoration: none;
   }
 
-  .navlist li a:hover {
+  .navlist li a:hover,
+  .navlist li a:active {
     content:"";
     color: rgb(146, 122, 122);
 border-radius: 50%;
