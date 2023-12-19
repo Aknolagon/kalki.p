@@ -1,0 +1,92 @@
+.projects {
+
+  .heading {
+    margin-top: 10rem;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+    color: rgb(102, 2, 34);
+    color: linear-gradient(0deg, rgba(142, 0, 46, 1) 0%, rgba(0, 0, 0, 1) 84%);
+  }
+
+  .project-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .project-layer {
+ position:relative;
+ border-radius: 2rem;
+ box-shadow: 0 0 1rem #1f242d;
+ overflow: hidden;
+ display: flex;
+
+  }
+
+  .project-layer img {
+width: 100%;
+transition: .5s ease;
+  }
+
+  .project-layer:hover img {
+transform: scale(1.1);
+  }
+
+ .project-text {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 80%;
+height: 100%;
+color: antiquewhite;
+background: linear-gradient(rgba(0, 0, 0, .1), rgba(55, 1, 18, 0.726));
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+padding: 0 4rem;
+transform: translateY(100%);
+transition: .5s ease;
+  }
+
+   .project-layer:hover .project-text {
+        transform: translateY(0);
+    }
+
+    .project-text h2 {
+        font-size: 2rem;
+}
+
+  .project-text p {
+    font-size: 1rem;
+    margin: .3rem 0 1rem;
+  }
+
+  .url {
+   padding: 0.5rem 1rem;
+    transition: all 0.5s ease;
+    color: antiquewhite;
+    text-decoration: none;
+  }
+
+  .url:hover {
+        content:"";
+    color: rgb(146, 122, 122);
+border-radius: 50%;
+z-index: -1;
+transform: scale(1.5);
+  transition: all 0.5s ease;
+  color: antiquewhite;
+  }
+}
+@media (min-width: 768px) {
+  .projects div {
+    flex-direction: row;
+  }
+}

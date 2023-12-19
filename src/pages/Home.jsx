@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import AboutMe from "./AboutMe";
 import Skills from "./Skills";
 import Contact from "./Contact";
+import MyProjects from "./MyProjects";
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <Header />
     <AboutMe />
     <Skills />
+    <MyProjects />
     <Contact />
     </main>
   );

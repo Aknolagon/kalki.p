@@ -8,6 +8,10 @@ import figma from "/src/assets/skills/figma.svg";
 import nodejs from "/src/assets/skills/nodejs.svg";
 import mysql from "/src/assets/skills/mysql-icon.svg";
 import express from "/src/assets/skills/expressjs.svg";
+import babyplace from "/src/assets/history/babyplace.png";
+import juracine from "/src/assets/history/juracine.png";
+import portfolio from "/src/assets/history/portfolio.png";
+
 
 
 export const skillsData = [
@@ -56,11 +60,6 @@ export const skillsData = [
     img: gitImg,
     title: "Git/Github",
   },
-  // {
-  //   id: 3,
-  //   img: "",
-  //   title: "Google Drive",
-  // },
   {
     id: 12,
     img: visual,
@@ -69,29 +68,30 @@ export const skillsData = [
 ];
 
 
-export const workData = [
+export const projetsData = [
   {
-    // img: "assets/skills/css.png",
-    title: "Education Website (React)",
+    id: 1,
+    img: babyplace,
+    title: "Babyplace (En cours)",
+    text: "Projet Front-End (HTML, Javascript, ReactJs, SASS) et Back-End (NodeJs, MySQL, ExpressJs)",
+    url: "in progress",
+    github:
+      "https://github.com/WildCodeSchool-2023-09/JS-RemoteFR-jurascripts-P3-Babyplace.git",
   },
   {
-    // img: "assets/skills/css.png",
-    title: "Portfolio Website (FrontEnd)",
+    id: 2,
+    img: juracine,
+    title: "Juraciné (Fini)",
+    text: "Projet Front-End (HTML, Javascript, SASS, ReactJs) et Back-End (API)",
+    url: "https://jurastream.vercel.app",
+    github: "https://github.com/Aknolagon/Juracine.git",
   },
   {
-    // img: "assets/skills/css.png",
-    title: "Ecommerce Website (FrontEnd)",
-  },
-];
-export const testimonialData = [
-  {
-    img: "",
-    title: "Ijaz Khan",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, beatae deserunt elit. Quidem, beatae deserunt",
-  },
-  {
-    img: "",
-    title: "Irfa Zohan",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, beatae deserunt  elit. Quidem, beatae deserunt",
+    id: 3,
+    img: portfolio,
+    title: "Portfolio (Fini)",
+    text: "Projet Front-End (HTML, SASS, JS, ReactJs)",
+    url: "in progress",
+    github: "in progress",
   },
 ];

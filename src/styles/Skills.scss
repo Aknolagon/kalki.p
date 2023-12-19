@@ -12,11 +12,6 @@
 color: linear-gradient(0deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
 }
 
-  .heading span {
-    color: antiquewhite;
-    text-decoration: none;
-    font-size: 3.2rem;
-  }
 
   .divider {
     height: 110px;
@@ -93,7 +88,6 @@ background: linear-gradient(50deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
     .skill-item:hover {
       transform: scale(1.1);
         transition: transform ease-in 300ms;
-    // transition: all 0.5s ease;
     color: rgb(146, 122, 122);
     }
   }
