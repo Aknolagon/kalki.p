@@ -8,7 +8,7 @@ import AboutMe from "./pages/AboutMe";
 import Skills from "./pages/Skills";
 import MyProjects from "./pages/MyProjects";
 import Contact from "./pages/Contact";
-import Home from "./pages/Home"
+import Home from "./pages/HOme"
 
 const router = createBrowserRouter([
   {
