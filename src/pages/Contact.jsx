@@ -17,19 +17,19 @@ function Contact() {
 
   const sendEmail = (event) => {
     alert("Message envoyé");
-    event.preventDefault(); // 👈️ prevent page refresh
+    event.preventDefault();
     emailjs.sendForm(
       "service_hursc5o",
       "template_63cnaa8",
        form.current,
       "fxeACTeSH1AMoIHkw"
-      //  import.meta.env.REACT_APP_YOUR_SERVICE_ID,
-      //  import.meta.env.REACT_APP_OUR_TEMPLATE_ID,
+      //  import.meta.env.YOUR_SERVICE_ID,
+      //  import.meta.env.YOUR_TEMPLATE_ID,
       //  form.current,
-      //  import.meta.env.REACT_APP_YOUR_PUBLIC_KEY,
+      //  import.meta.env.YOUR_PUBLIC_KEY,
     );
 
-    // 👇️ clear all input values in the form
+    
     setLastname("");
     setFirstname("");
     setEmail("");

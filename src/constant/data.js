@@ -83,7 +83,7 @@ export const projetsData = [
     img: juracine,
     title: "Juraciné (Fini)",
     text: "Projet Front-End (HTML, Javascript, SASS, ReactJs) et Back-End (API)",
-    url: "https://jurastream.vercel.app",
+    url: "https://juracine.vercel.app/home",
     github: "https://github.com/Aknolagon/Juracine.git",
   },
   {

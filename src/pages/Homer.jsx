@@ -6,7 +6,7 @@ import Skills from "./Skills";
 import Contact from "./Contact";
 import MyProjects from "./MyProjects";
 
-function Home() {
+function Homer() {
   return (
     <main className="home">
       <NavBar />
@@ -19,4 +19,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Homer;

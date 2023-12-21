@@ -1,5 +1,4 @@
 import "../styles/Header.scss";
-import Profile from "../assets/Profile3.webp";
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -38,7 +37,6 @@ function Header() {
           </div>
         </div>
         <div className="header-right">
-          <img className="profile" src={Profile} alt="profile" />
         </div>
       </div>
 
