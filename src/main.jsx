@@ -8,7 +8,7 @@ import AboutMe from "./pages/AboutMe";
 import Skills from "./pages/Skills";
 import MyProjects from "./pages/MyProjects";
 import Contact from "./pages/Contact";
-import Homer from "./pages/Homer"
+import Home from "./pages/Home"
 
 const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Homer />,
+        element: <Home />,
       },
       {
         path: "/aboutme",
