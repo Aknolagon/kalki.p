@@ -19,16 +19,13 @@
     font-size: 1.9rem;
     font-weight: 700;
     text-decoration: none;
+    font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
   a.portfolio {
- color: rgb(142,0,46);
+ color:  rgba(142,0,46,1);
 color: linear-gradient(0deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
-  }
-  .portfolio span {
-    color: antiquewhite;
-    text-decoration: none;
-    font-size: 1.7rem;
   }
 
   .portfolio span:hover {
@@ -69,7 +66,8 @@ font-family: 'Poppins', sans-serif;
     text-decoration: none;
   }
 
-  .navlist li a:hover {
+  .navlist li a:hover,
+  .navlist li a:active {
     content:"";
     color: rgb(146, 122, 122);
 border-radius: 50%;

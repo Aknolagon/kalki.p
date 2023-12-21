@@ -1,13 +1,28 @@
 import "../styles/Skills.scss";
-// import "../components/NavBar.scss";
-// import Logo from "../assets/LOGO.png";
+import { skillsData } from "../constant/data";
 
 function Skills() {
   return (
-    <div className="welcome">
-      <div>hello</div>
-    </div>
+    <section className="skills">
+      <div className="heading">
+        <h1>
+          Skills
+        </h1>
+      </div>
+      <div className="contents">
+        <ul className="skills-set">
+          {skillsData.map((skill) => (
+            <div className="skill-item" key={skill.id}>
+              <img src={skill.img} alt={skill.title} />
+              <p>{skill.title}</p>
+            </div>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 }
+
+
 
 export default Skills;
