@@ -1,9 +1,17 @@
 import "../styles/Header.scss";
-import { Link } from "react-router-dom";
+import aboutMe from "../assets/Profile.webp";
 
 function Header() {
+
+  const downloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/src/assets/Kalki_Prasanna.pdf';
+    link.download = 'CV_KALKI_PRASANNA.pdf';
+    link.click();
+  };
+
   return (
-    <section className="header">
+    <section id="/" className="header">
       {/* desktop */}
       <div className="container header-container">
         <div className="header-left">
@@ -22,24 +30,29 @@ function Header() {
             and more recently with desktopqdd publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
-          <div className="header-btns">
-            <button className="btn">
-              <a
-                href="/src/assets/Kalki_Prasanna.pdf"
-                download="CV_KALKI_Prasanna.pdf"
-              >
-                Mon CV
-              </a>
-            </button>
-            <button className="btn">
-              <Link to="/projects">Mes Projets</Link>
-            </button>
-          </div>
         </div>
         <div className="header-right">
+          <div className="img-header">
+            <img src={aboutMe} alt="Prasanna" className="user-avatar" />
+            <div className="username">Aknolagon</div>
+          </div>
+          <img src={aboutMe} alt="photo" className="header-image" />
+          <div className="header-caption">
+            <span>Aknolagon:</span> Développeur Web disponible :D
+          </div>
+          <div className="header-actions">
+            <div className="header-action">
+              <span className="header-like">❤</span> J&apos;aime
+            </div>
+            <button onClick={downloadCV} className="btns">
+              Voici mon CV
+            </button>
+            <div className="header-action">
+              <span className="header-comment">💬</span> Commenter
+            </div>
+          </div>
         </div>
       </div>
-
       {/* Mobile version */}
     </section>
   );

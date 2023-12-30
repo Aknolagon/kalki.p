@@ -1,8 +1,8 @@
 .skills {
+  margin-top: 15rem;
 
 .heading {
-  margin-top: 10rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 3rem;
     text-align: center;
     text-decoration: none;
@@ -11,7 +11,6 @@
      color: rgb(102, 2, 34);
 color: linear-gradient(0deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
 }
-
 
   .divider {
     height: 110px;
@@ -22,12 +21,7 @@ color: linear-gradient(0deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
   }
 
   @media (min-width: 768px) {
-    .divider {
-      margin: 0;
-      width: 100%;
-      background-image: url(/src/assets/skills/dekstop-divider.svg);
-      background-size: 100%;
-    }
+
   }
 
   .contents {
@@ -37,7 +31,7 @@ color: linear-gradient(0deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
       gap: 1.5rem;
-      margin-right: 3rem;
+      margin-right: 7rem;
       
       p {
         font-size: 1.5rem;
@@ -76,8 +70,8 @@ color: linear-gradient(0deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
       box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.2),
     -10px -10px 15px -5px rgba(255, 255, 255, 0.1);
     color: antiquewhite;
- background:  rgba(142,0,46,1);
-background: linear-gradient(50deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
+ background:  transparent;
+// background: linear-gradient(50deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
     }
 
     .skill-item:hover {

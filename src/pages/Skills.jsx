@@ -3,7 +3,7 @@ import { skillsData } from "../constant/data";
 
 function Skills() {
   return (
-    <section className="skills">
+    <section id="/skills" className="skills">
       <div className="heading">
         <h1>
           Skills

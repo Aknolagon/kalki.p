@@ -1,36 +1,11 @@
 import "../styles/AboutMe.scss";
-import About from "../assets/Profile.webp";
 
 function AboutMe() {
   return (
-    <section className="about-me">
+    <section id="/aboutme" className="about-me">
       <h2 className="heading">À Propos</h2>
       <div className="about-content">
         <div className="about-left">
-          <div className="about-header">
-            <img src={About} alt="Prasanna" className="user-avatar" />
-            <div className="username">Aknolagon</div>
-          </div>
-          <img src={About} alt="photo" className="about-image" />
-          <div className="about-caption">
-            <span>Aknolagon:</span> Développeur Web disponible :D
-          </div>
-          <div className="about-actions">
-            <div className="about-action">
-              <span className="about-like">❤</span> J&apos;aime
-            </div>
-            <button className="btns">
-              <a
-                href="/src/assets/Kalki_Prasanna.pdf"
-                download="CV_KALKI_Prasanna.pdf"
-              >
-                Voici mon CV
-              </a>
-            </button>
-            <div className="about-action">
-              <span className="about-comment">💬</span> Commenter
-            </div>
-          </div>
         </div>
 
         <div className="about-right">

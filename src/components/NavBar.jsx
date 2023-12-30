@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import "../styles/NavBar.scss";
-import { RiInstagramFill, RiLinkedinFill, RiGithubFill } from "react-icons/ri";
+import { RiLinkedinFill, RiGithubFill } from "react-icons/ri";
 import Logo from "../assets/Logo.webp";
 
 function NavBar() {
@@ -12,41 +12,38 @@ function NavBar() {
         </a>
         <ul className="navlist">
           <li>
-            <Link to="/" className="active">
+            <Link to="/" className="active" smooth={true} duration={100}>
               Accueil
             </Link>
           </li>
           <li>
-            <Link to="/aboutme" className="active">
+            <Link to="/aboutme" className="active" smooth={true} duration={100}>
               À propos
             </Link>
           </li>
           <li>
-            <Link to="/skills" className="active">
+            <Link to="/skills" className="active" smooth={true} duration={100}>
               Skills
             </Link>
           </li>
           <li>
-            <Link to="/projects" className="active">
+            <Link
+              to="/projects"
+              className="active"
+              smooth={true}
+              duration={100}
+            >
               Mes Projets
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="active">
+            <Link to="/contact" className="active" smooth={true} duration={100}>
               Me Contacter
             </Link>
           </li>
         </ul>
+      </div>
         <div className="social-links">
-          <li>
-            <a
-              href="https://www.instagram.com/ore_wa_pras/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <RiInstagramFill />
-            </a>
-          </li>
           <li>
             <a
               href="https://www.linkedin.com/in/prasanna-kalki-64b5231b4/"
@@ -66,10 +63,9 @@ function NavBar() {
             </a>
           </li>
         </div>
-      </div>
-      <Link className="home-logo" to="/">
-        <img className="logo" src={Logo} alt="logo" />
-      </Link>
+          <a href="" className="home-logo" to="/">
+            <img className="logo" src={Logo} alt="logo" />
+          </a>
     </nav>
   );
 }
