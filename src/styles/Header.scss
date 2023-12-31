@@ -10,26 +10,17 @@
 
   .header-left {
     position: relative;
-    top: 2rem;
+    top: 5rem;
     left: 3rem;
-  }
-  .header-left span {
-    color: rgb(102, 2, 34);
-    color: linear-gradient(0deg, rgba(142, 0, 46, 1) 0%, rgba(0, 0, 0, 1) 84%);
-    font-weight: 900;
-    font-size: 3.3rem;
-    font-family: "Kanit", sans-serif;
-    font-family: "Poppins", sans-serif;
   }
 
   .header-left .name {
     color: antiquewhite;
     text-decoration: none;
-    font-size: 3.2rem;
   }
 
   .header-left h1 {
-    font-size: 3.8rem;
+    font-size: 3rem;
     font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
     color: antiquewhite;

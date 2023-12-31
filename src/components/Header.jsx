@@ -16,7 +16,7 @@ function Header() {
       <div className="container header-container">
         <div className="header-left">
           <h1>
-            Hello, je suis <span>Prasanna KALKI</span>
+            Hello, je suis Prasanna KALKI
           </h1>
           <h3 className="text-animate">Un Développeur Web et Web Mobile</h3>
           <p>

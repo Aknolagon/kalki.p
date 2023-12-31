@@ -1,88 +1,114 @@
 .skills {
-  margin-top: 15rem;
-
-.heading {
+  .heading {
     font-size: 2.5rem;
-    margin-bottom: 3rem;
+    margin-top: 5rem;
     text-align: center;
     text-decoration: none;
-        font-family: "Kanit", sans-serif;
+    font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
-     color: rgb(102, 2, 34);
-color: linear-gradient(0deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
-}
+    color: rgb(102, 2, 34);
+    color: linear-gradient(0deg, rgba(142, 0, 46, 1) 0%, rgba(0, 0, 0, 1) 84%);
+  }
 
   .divider {
-    height: 110px;
     text-align: center;
-    background-image: url(/src/assets/skills/dekstop-divider.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    margin: 2rem 0;
+    font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+    color: antiquewhite;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem black;
+    border-width: 3px;
+    background: #1d1f20;
+    position: relative;
+    border-radius: 3px;
+    padding: auto 0;
+  }
+
+  .divider:after {
+    content: "";
+    position: absolute;
+    top: calc(-1 * 3px);
+    left: calc(-1 * 3px);
+    height: calc(100% + 3px * 2);
+    width: calc(100% + 3px * 2);
+    background: linear-gradient(
+      60deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
+    border-radius: calc(2 * 3px);
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
   }
 
   @media (min-width: 768px) {
-
-  }
-
-  .contents {
-    margin: 5rem 0;
-    .skills-set {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-right: 7rem;
-      
-      p {
-        font-size: 1.5rem;
-        margin-top: 1rem;
-             font-family: "Kanit", sans-serif;
-    font-family: "Poppins", sans-serif;
-      }
-
-      img {
-        width: 100px;
-      }
-    }
-
-    @media (min-width: 768px) {
-      .section-title {
-        text-align: start;
-      }
-
+    .contents {
       .skills-set {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1080px) {
-      .skills-set {
+        display: grid;
         grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 1.1rem;
+        margin-right: 7rem;
+        margin-left: 1rem;
+        margin-bottom: 0.5rem;
+
+        p {
+          font-size: 1rem;
+          margin-top: 1rem;
+          font-family: "Kanit", sans-serif;
+          font-family: "Poppins", sans-serif;
+        }
+
+        img {
+          width: 100px;
+        }
+      }
+
+      .skill-item {
+        border-radius: 2rem;
+        padding: 1rem;
+        text-align: center;
+        position: relative;
+        box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.2),
+          -10px -10px 15px -5px rgba(255, 255, 255, 0.1);
+        color: antiquewhite;
+        background: transparent;
+      }
+
+      .skill-item:hover {
+        box-shadow: inset 10px 10px 15px -3px rgba(0, 0, 0, 0.2),
+          inset -10px -10px 15px -5px rgba(255, 255, 255, 0.1);
+      }
+
+      .skill-item:hover {
+        transform: scale(1.1);
+        transition: transform ease-in 300ms;
+        color: rgb(146, 122, 122);
       }
     }
 
-    .skill-item {
-      border-radius: 2rem;
-      padding: 1rem;
-      text-align: center;
-      position: relative;
-      box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.2),
-    -10px -10px 15px -5px rgba(255, 255, 255, 0.1);
-    color: antiquewhite;
- background:  transparent;
-// background: linear-gradient(50deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
-    }
-
-    .skill-item:hover {
-      box-shadow: inset 10px 10px 15px -3px rgba(0, 0, 0, 0.2),
-    inset -10px -10px 15px -5px rgba(255, 255, 255, 0.1);
-    }
-
-    .skill-item:hover {
-      transform: scale(1.1);
-        transition: transform ease-in 300ms;
-    color: rgb(146, 122, 122);
+    @keyframes animatedgradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
   }
 }

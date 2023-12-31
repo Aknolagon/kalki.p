@@ -1,6 +1,7 @@
 import { Link } from "react-scroll";
 import "../styles/NavBar.scss";
 import { RiLinkedinFill, RiGithubFill } from "react-icons/ri";
+import { BiLogoGmail } from "react-icons/bi";
 import Logo from "../assets/Logo.webp";
 
 function NavBar() {
@@ -11,22 +12,22 @@ function NavBar() {
           <span>Portfolio</span>
         </a>
         <ul className="navlist">
-          <li>
+          <li className="navlist-corners">
             <Link to="/" className="active" smooth={true} duration={100}>
               Accueil
             </Link>
           </li>
-          <li>
+          <li className="navlist-corners">
             <Link to="/aboutme" className="active" smooth={true} duration={100}>
               À propos
             </Link>
           </li>
-          <li>
+          <li className="navlist-corners">
             <Link to="/skills" className="active" smooth={true} duration={100}>
               Skills
             </Link>
           </li>
-          <li>
+          <li className="navlist-corners">
             <Link
               to="/projects"
               className="active"
@@ -36,36 +37,41 @@ function NavBar() {
               Mes Projets
             </Link>
           </li>
-          <li>
+          <li className="navlist-corners">
             <Link to="/contact" className="active" smooth={true} duration={100}>
               Me Contacter
             </Link>
           </li>
         </ul>
       </div>
-        <div className="social-links">
-          <li>
-            <a
-              href="https://www.linkedin.com/in/prasanna-kalki-64b5231b4/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <RiLinkedinFill />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/Aknolagon"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <RiGithubFill />
-            </a>
-          </li>
-        </div>
-          <a href="" className="home-logo" to="/">
-            <img className="logo" src={Logo} alt="logo" />
+      <div className="social-links">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/prasanna-kalki-64b5231b4/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <RiLinkedinFill />
           </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/Aknolagon"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <RiGithubFill />
+          </a>
+        </li>
+        <li>
+          <Link to="/contact" className="active" smooth={true} duration={100}>
+            <BiLogoGmail />
+          </Link>
+        </li>
+      </div>
+      <a href="" className="home-logo" to="/">
+        <img className="logo" src={Logo} alt="logo" />
+      </a>
     </nav>
   );
 }
