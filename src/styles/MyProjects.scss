@@ -1,9 +1,8 @@
 .projects {
+  margin-top: 11rem;
 
   .heading {
-    margin-top: 10rem;
     font-size: 3rem;
-    margin-bottom: 3rem;
     text-align: center;
     text-decoration: none;
     font-family: "Kanit", sans-serif;
@@ -14,43 +13,41 @@
 
   .project-box {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    width: 85%;
+    margin-left: 2rem;
   }
-
+  
   .project-layer {
- position:relative;
- border-radius: 2rem;
- box-shadow: 0 0 1rem #1f242d;
- overflow: hidden;
- display: flex;
-
+    position:relative;
+    overflow: hidden;
   }
-
+  
   .project-layer img {
-width: 100%;
-transition: .5s ease;
+    width: 100%;
+    border-radius: 1rem;
   }
-
+  
   .project-layer:hover img {
-transform: scale(1.1);
+    transition: .5s ease;
+    transform: scale(1.1);
   }
-
- .project-text {
-position: absolute;
+  
+  .project-text {
+    position: absolute;
 bottom: 0;
 left: 0;
 width: 80%;
 height: 100%;
 color: antiquewhite;
-background: linear-gradient(rgba(0, 0, 0, .1), rgba(55, 1, 18, 0.726));
+background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, 0.726));
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
 text-align: center;
-padding: 0 4rem;
+padding: 0 5rem;
 transform: translateY(100%);
 transition: .5s ease;
   }
@@ -71,17 +68,15 @@ transition: .5s ease;
   .url {
     width: 100%;
     color:antiquewhite;
-    justify-content: space-between;
   }
 
   .url:hover {
         content:"";
-    color: rgb(146, 122, 122);
 border-radius: 50%;
 z-index: -1;
 transform: scale(1.5);
   transition: all 0.5s ease;
-  color: antiquewhite;
+  color: #5d4e50;
   }
 }
 @media (min-width: 768px) {

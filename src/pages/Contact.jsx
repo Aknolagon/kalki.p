@@ -1,12 +1,8 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "../styles/Contact.scss";
-
-// const {
-//   REACT_APP_YOUR_SERVICE_ID,
-//   REACT_APP_YOUR_TEMPLATE_ID,
-//   REACT_APP_YOUR_PUBLIC_KEY,
-// } = process.env;
+import Lottie from "react-lottie-player";
+import mailJson from "../lotties/mail.json";
 
 function Contact() {
   const form = useRef();
@@ -14,19 +10,22 @@ function Contact() {
   const [firstname, setFirstname] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  //  const serviceId = import.meta.env.VITE_APP_SERVICE_ID;
+  //  const templateId = import.meta.env.VITE_APP_TEMPLATE_ID;
+  //  const publicKey = import.meta.env.VITE_APP_PUBLIC_KEY;
 
   const sendEmail = (event) => {
     alert("Message envoyé");
     event.preventDefault();
     emailjs.sendForm(
-      "service_hursc5o",
-      "template_63cnaa8",
-       form.current,
-      "fxeACTeSH1AMoIHkw"
-      //  import.meta.env.YOUR_SERVICE_ID,
-      //  import.meta.env.YOUR_TEMPLATE_ID,
+      // "service_hursc5o",
+      // "template_63cnaa8",
       //  form.current,
-      //  import.meta.env.YOUR_PUBLIC_KEY,
+      // "fxeACTeSH1AMoIHkw",
+       import.meta.env.VITE_YOUR_SERVICE_ID,
+       import.meta.env.VITE_YOUR_TEMPLATE_ID,
+       form.current,
+       import.meta.env.VITE_YOUR_PUBLIC_KEY,
     );
 
     
@@ -37,10 +36,16 @@ function Contact() {
   };
 
   return (
-    <section className="contact">
+    <section id="/contact" className="contact">
       <div className="title">
         <h2 className="heading">Me Contacter</h2>
-      </div>
+        </div>
+      <Lottie
+        loop
+        animationData={mailJson}
+        play
+        style={{ width: 1450, height: 250 }}
+        />
       <div className="contact-container">
         <form ref={form} className="contact-form" onSubmit={sendEmail}>
           <div className="form-name">

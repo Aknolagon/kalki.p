@@ -1,15 +1,57 @@
 import "../styles/Header.scss";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import aboutMe from "../assets/Profile.webp";
+import scroll from "../assets/scroll.png";
 
 function Header() {
+
+  const textVariants = {
+    initial: {
+      x: -500,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.1,
+      },
+    },
+    scrollButton: {
+      opacity: 0,
+      y: 10,
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+      },
+    },
+  };
+
+  const downloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/src/assets/Kalki_Prasanna.pdf';
+    link.download = 'CV_KALKI_PRASANNA.pdf';
+    link.click();
+  };
+
+    const handleScrollButtonClick = () => {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth",
+      });
+    };
+
   return (
-    <section className="header">
-      {/* desktop */}
-      <div className="container header-container">
-        <div className="header-left">
-          <h1>
-            Hello, je suis <span>Prasanna KALKI</span>
-          </h1>
+    <section id="/" className="header">
+      <motion.div
+        className="container header-container"
+        variants={textVariants}
+        initial="initial"
+        animate="animate"
+      >
+        <motion.div className="header-left" variants={textVariants}>
+          <h1>Hello, je suis Prasanna KALKI</h1>
           <h3 className="text-animate">Un Développeur Web et Web Mobile</h3>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -22,25 +64,37 @@ function Header() {
             and more recently with desktopqdd publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
-          <div className="header-btns">
-            <button className="btn">
-              <a
-                href="/src/assets/Kalki_Prasanna.pdf"
-                download="CV_KALKI_Prasanna.pdf"
-              >
-                Mon CV
-              </a>
-            </button>
-            <button className="btn">
-              <Link to="/projects">Mes Projets</Link>
-            </button>
+        </motion.div>
+        <motion.div className="header-right" variants={textVariants}>
+          <div className="img-header">
+            <img src={aboutMe} alt="Prasanna" className="user-avatar" />
+            <div className="username">Aknolagon</div>
           </div>
-        </div>
-        <div className="header-right">
-        </div>
-      </div>
-
-      {/* Mobile version */}
+          <img src={aboutMe} alt="photo" className="header-image" />
+          <div className="header-caption">
+            <span>Aknolagon:</span> Développeur Web disponible :D
+          </div>
+          <div className="header-actions">
+            <div className="header-action">
+              <span className="header-like">❤</span> J&apos;aime
+            </div>
+            <button onClick={downloadCV} className="btns">
+              Voici mon CV
+            </button>
+            <div className="header-action">
+              <span className="header-comment">💬</span> Commenter
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          className="imageContainer"
+          animate="scrollButton"
+          variants={textVariants}
+          onClick={handleScrollButtonClick}
+        >
+          <img src={scroll} alt="" />
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

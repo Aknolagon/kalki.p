@@ -6,7 +6,7 @@ import { RiGithubFill } from "react-icons/ri";
 function MyProjects() {
   return (
     <section>
-      <div className="projects">
+      <div id="/projects" className="projects">
         <h1 className="heading">Mes Projets</h1>
         <div className="project-container">
           <ul className="project-box">

@@ -7,14 +7,13 @@ import visual from "/src/assets/skills/visual.svg";
 import figma from "/src/assets/skills/figma.svg";
 import nodejs from "/src/assets/skills/nodejs.svg";
 import mysql from "/src/assets/skills/mysql-icon.svg";
+import google from "/src/assets/skills/google.png";
 import express from "/src/assets/skills/expressjs.svg";
 import babyplace from "/src/assets/history/babyplace.png";
 import juracine from "/src/assets/history/juracine.png";
 import portfolio from "/src/assets/history/portfolio.png";
 
-
-
-export const skillsData = [
+export const skillsFrontData = [
   {
     id: 1,
     img: htmlImg,
@@ -26,47 +25,57 @@ export const skillsData = [
     title: "Javascript",
   },
   {
-    id: 4,
+    id: 3,
     img: sassImg,
     title: "Sass",
   },
   {
-    id: 5,
+    id: 4,
     img: reactImg,
     title: "React",
   },
+];
+
+export const skillsBackData = [
   {
-    id: 6,
+    id: 1,
     img: mysql,
     title: "MySQL",
   },
   {
-    id: 7,
+    id: 2,
     img: nodejs,
     title: "NodeJs",
   },
   {
-    id: 8,
+    id: 3,
     img: express,
     title: "EspressJs",
   },
+];
+
+export const skillsToolsData = [
   {
-    id: 9,
+    id: 1,
     img: figma,
     title: "Figma",
   },
   {
-    id: 10,
+    id: 2,
     img: gitImg,
     title: "Git/Github",
   },
   {
-    id: 12,
+    id: 3,
+    img: google,
+    title: "Google Drive",
+  },
+  {
+    id: 4,
     img: visual,
-    title: "VS",
+    title: "VS Code",
   },
 ];
-
 
 export const projetsData = [
   {
