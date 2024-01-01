@@ -16,8 +16,8 @@ function AboutMe() {
 
         <div className="about-right">
           <p className="about-paragraph">
-            J&apos;ai des connaissances en Front-End et Back-End. Après avoir
-            commencé ma carrière dans un domaine complétement différent, j’ai eu
+            J&apos;ai des connaissances en Front-End et en Back-End. Après avoir
+            commencé ma carrière en tant que Business Developper, j’ai eu
             envie de travailler dans un domaine qui me tenait à cœur et cela
             depuis plusieurs années. C&apos;est pourquoi, j&apos;ai commencé une
             formation à la Wild Code School pour devenir Développeur Web et Web

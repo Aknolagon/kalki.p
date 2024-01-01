@@ -1,16 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Dancing+Script&family=Kanit:wght@500&family=Poppins&display=swap");
 
 .header {
-
   .header-container {
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 0.5rem;
+    align-items: center;
   }
 
   .header-left {
     position: relative;
-    top: 5rem;
     left: 3rem;
   }
 
@@ -74,50 +73,8 @@
     color: antiquewhite;
   }
 
-  .header-btns {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-    margin-right: 15rem;
-
-    .btn {
-      display: inline-block;
-      width: fit-content;
-      gap: 1rem;
-      background: linear-gradient(
-        90deg,
-        rgba(142, 0, 46, 1) 0%,
-        rgba(0, 0, 0, 1) 100%
-      );
-      box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-      color: antiquewhite;
-      padding: 0.9rem 3rem;
-      border: 1px solid hsl(0, 0%, 22%);
-      border-radius: 2rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.5s ease;
-      font-family: "Kanit", sans-serif;
-      font-family: "Poppins", sans-serif;
-      text-decoration: none;
-    }
-
-    a {
-      color: antiquewhite;
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      transform: scale(1.1);
-      transition: all 0.5s ease;
-      color: rgb(146, 122, 122);
-      text-decoration: none;
-      list-style: none;
-    }
-  }
-
   .header-right {
-    margin-top: 8rem;
+    margin-top: 5rem;
     max-width: 600px;
     margin-left: 0.1rem;
     background-color: antiquewhite;
@@ -206,7 +163,6 @@
     color: rgb(146, 122, 122);
   }
 
-  //keyframes
   @keyframes homebgText {
     0%,
     10%,
@@ -239,6 +195,14 @@
       opacity: 0;
     }
   }
+}
+
+.imageContainer {
+  position: absolute;
+  bottom: 5%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {

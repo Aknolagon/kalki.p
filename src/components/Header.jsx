@@ -1,7 +1,32 @@
 import "../styles/Header.scss";
+import { motion } from "framer-motion";
 import aboutMe from "../assets/Profile.webp";
+import scroll from "../assets/scroll.png";
 
 function Header() {
+
+  const textVariants = {
+    initial: {
+      x: -500,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.1,
+      },
+    },
+    scrollButton: {
+      opacity: 0,
+      y: 10,
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+      },
+    },
+  };
 
   const downloadCV = () => {
     const link = document.createElement('a');
@@ -10,14 +35,23 @@ function Header() {
     link.click();
   };
 
+    const handleScrollButtonClick = () => {
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth",
+      });
+    };
+
   return (
     <section id="/" className="header">
-      {/* desktop */}
-      <div className="container header-container">
-        <div className="header-left">
-          <h1>
-            Hello, je suis Prasanna KALKI
-          </h1>
+      <motion.div
+        className="container header-container"
+        variants={textVariants}
+        initial="initial"
+        animate="animate"
+      >
+        <motion.div className="header-left" variants={textVariants}>
+          <h1>Hello, je suis Prasanna KALKI</h1>
           <h3 className="text-animate">Un Développeur Web et Web Mobile</h3>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -30,8 +64,8 @@ function Header() {
             and more recently with desktopqdd publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
-        </div>
-        <div className="header-right">
+        </motion.div>
+        <motion.div className="header-right" variants={textVariants}>
           <div className="img-header">
             <img src={aboutMe} alt="Prasanna" className="user-avatar" />
             <div className="username">Aknolagon</div>
@@ -51,9 +85,16 @@ function Header() {
               <span className="header-comment">💬</span> Commenter
             </div>
           </div>
-        </div>
-      </div>
-      {/* Mobile version */}
+        </motion.div>
+        <motion.div
+          className="imageContainer"
+          animate="scrollButton"
+          variants={textVariants}
+          onClick={handleScrollButtonClick}
+        >
+          <img src={scroll} alt="" />
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

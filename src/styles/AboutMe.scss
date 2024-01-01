@@ -1,15 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Dancing+Script&family=Kanit:wght@500&family=Poppins&display=swap");
 
 .about-me {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 2.5rem;
+  margin-top: 10rem;
 
   .heading {
     font-size: 3.3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
     text-align: center;
     text-decoration: none;
     font-family: "Kanit", sans-serif;
@@ -162,7 +158,7 @@
   }
 
   .about-paragraph {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin: 2rem 0 3rem;
     margin-right: 10rem;
     font-family: "Kanit", sans-serif;
