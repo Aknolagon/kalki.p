@@ -8,7 +8,8 @@ import AboutMe from "./pages/AboutMe";
 import Skills from "./pages/Skills";
 import MyProjects from "./pages/MyProjects";
 import Contact from "./pages/Contact";
-import Home from "./pages/Home"
+import Home from "./pages/Home";
+import { ThemeProvider } from "./context/ThemeContext";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+      <ThemeProvider>
+      <RouterProvider router={router} />
+      </ThemeProvider>
   </React.StrictMode>
 );

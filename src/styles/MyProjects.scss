@@ -1,3 +1,5 @@
+@import "./variables";
+
 .projects {
   margin-top: 11rem;
 
@@ -7,8 +9,7 @@
     text-decoration: none;
     font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
-    color: rgb(102, 2, 34);
-    color: linear-gradient(0deg, rgba(142, 0, 46, 1) 0%, rgba(0, 0, 0, 1) 84%);
+    color: antiquewhite;
   }
 
   .project-box {
@@ -23,6 +24,17 @@
     position:relative;
     overflow: hidden;
   }
+
+  .project-layer:hover{
+        background: #03e9f4;
+    color: #050801;
+    padding: 0.8rem;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+  }
   
   .project-layer img {
     width: 100%;
@@ -32,6 +44,7 @@
   .project-layer:hover img {
     transition: .5s ease;
     transform: scale(1.1);
+    border-radius: 1rem;
   }
   
   .project-text {
@@ -70,17 +83,68 @@ transition: .5s ease;
     color:antiquewhite;
   }
 
-  .url:hover {
-        content:"";
-border-radius: 50%;
-z-index: -1;
-transform: scale(1.5);
+.url:hover {
+  content: "";
+  transform: scale(0.5);
+  border-radius: 100%;
   transition: all 0.5s ease;
-  color: #5d4e50;
+  background: #03e9f4;
+  color: #050801;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+  &.light{
+.heading {
+    color: $primary-color-light;
   }
 }
-@media (min-width: 768px) {
-  .projects div {
-    flex-direction: row;
+}
+
+
+@media screen and (min-width: 1600px) {
+  .projects {
+     .heading {
+    font-size: 4rem;
   }
+
+  .project-layer {
+    width: 90%;
+    margin-left: 5rem;
+  }
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .projects {
+  .project-box {
+    display: flex;
+flex-direction: column;
+align-items: center;
+
+.project-layer{
+    width: 80%;  
+  }
+}
+}
+}
+
+   @media screen and (max-width: 767px) {
+      .projects {
+  .project-box {
+    display: flex;
+flex-direction: column;
+align-items: center;
+
+.project-layer{
+    width: 100%;  
+    margin-right: 5rem;
+
+  .project-text {
+    text-align: center;
+
+  }
+}
+  }
+}
 }

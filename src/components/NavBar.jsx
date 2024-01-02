@@ -1,10 +1,20 @@
 import { Link } from "react-scroll";
 import "../styles/NavBar.scss";
+import { useState } from "react";
 import { RiLinkedinFill, RiGithubFill } from "react-icons/ri";
 import { BiLogoGmail } from "react-icons/bi";
 import Logo from "../assets/Logo.webp";
+import { useTheme } from "../context/ThemeContext";
 
 function NavBar() {
+  const { handleTheme } = useTheme();
+  const [isOnMode, setIsOnMode] = useState(false);
+
+  const handleOnMode = () => {
+    setIsOnMode((prevMode) => !prevMode);
+    handleTheme();
+  };
+
   return (
     <nav className="navbar">
       <div className="container nav-container">
@@ -43,6 +53,24 @@ function NavBar() {
             </Link>
           </li>
         </ul>
+      </div>
+      <div className="mode">
+        <button
+          className={`glowing-btn ${isOnMode ? "on" : "off"}`}
+          onClick={handleOnMode}
+        >
+          <span className="glowing-txt">
+            {isOnMode ? (
+              <>
+                O<span className="faulty-letter">N</span>
+              </>
+            ) : (
+              <>
+                O<span className="faulty-letter">F</span>F
+              </>
+            )}
+          </span>
+        </button>
       </div>
       <div className="social-links">
         <li>

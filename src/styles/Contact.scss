@@ -1,5 +1,6 @@
+@import "./variables";
+
 .contact{
-padding-bottom: 0;
 
 
 .contact-container {
@@ -17,13 +18,8 @@ padding-bottom: 0;
 }
 
   h2.heading {
-  color: rgb(102, 2, 34);
-color: linear-gradient(0deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
-  }
-  .heading span {
     color: antiquewhite;
     text-decoration: none;
-    font-size: 2.8rem;
   }
 
 .contact-form {
@@ -31,6 +27,23 @@ color: linear-gradient(0deg, rgba(142,0,46,1) 0%, rgba(0,0,0,1) 84%);
     flex-direction: column;
     gap: 1.5rem;
     justify-content: center;
+}
+
+::placeholder {
+  color:rgb(53, 50, 50);
+}
+
+input:hover {
+  background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 10px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+textarea:hover {
+  background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 10px #03e9f4;
 }
 
 .contact-form .form-name {
@@ -58,27 +71,45 @@ gap: 1.2rem;
     width: fit-content;
     margin: 0 auto;
     gap: 1rem;
-    background: linear-gradient(
-      90deg,
-      rgba(142, 0, 46, 1) 0%,
-      rgba(0, 0, 0, 1) 100%
-    );
     box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
     color: antiquewhite;
-    padding: 0.9rem 6rem;
+    padding: 1rem 3rem;
     border: 1px solid hsl(0, 0%, 22%);
     border-radius: 2rem;
-    font-weight: 500;
+    font-size: 1rem;
     cursor: pointer;
     transition: all 0.5s ease;
     font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
+        background: black;
+    color: antiquewhite;
+    transition: all 0.5s ease;
   }
 
-  .btn:hover {
-    transform: scale(1.1);
+  .btn-txt {
+         padding: 20px 3px;
+     font-size: 1rem;
+  background-color: transparent;
+  color: antiquewhite;
+  font-weight: 500;
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+  }
+
+  .btn-txt:hover {
+     transform: scale(1.1);
     transition: all 0.5s ease;
-    color: rgb(146, 122, 122);
+background: #03e9f4;
+    color: #050801;
+    padding: 1rem;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
   }
 
   .copyright {
@@ -89,4 +120,71 @@ color: antiquewhite;
  font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
   }
+
+    &.light{
+.heading {
+    color: $primary-color-light;
+  }
+  .copyright {
+      color: $primary-color-light;
+  }
 }
+}
+
+@media screen and (min-width: 1600px) {
+.contact {
+  .heading {
+    font-size: 4rem;
+  }
+  
+  .lottie {
+margin-left: 15rem;
+}
+  }
+}
+
+@media screen and (min-width: 1600px) {
+.contact {
+  .heading {
+    font-size: 4rem;
+  }
+  
+  .lottie {
+margin-left: 15rem;
+}
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .contact {
+    .lottie {
+  transform: translate(-20%, -10%);
+    }
+  }
+}
+
+   @media screen and (max-width: 767px) {
+  .contact {
+
+   .heading {
+    font-size: 2rem;
+  }
+
+  .contact-container {
+    width: 100%;
+    margin: 0 auto;
+}
+    .lottie {
+  transform: translate(-36%, -10%);
+    }
+
+    .contact-container {
+    width: 100%;
+}
+
+.contact-form .btn {
+ padding: 15px;
+}
+  }
+}
+
