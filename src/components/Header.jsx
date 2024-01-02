@@ -65,7 +65,7 @@ function Header() {
   };
 
   const downloadCV = () => {
-    const path = "/src/assets/Kalki_Prasanna.pdf";
+    const path = "/Kalki_Prasanna.pdf";
 
     fetch(path)
       .then((response) => response.blob())
