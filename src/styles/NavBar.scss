@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Dancing+Script&family=Kanit:wght@500&family=Poppins&display=swap");
 
 .navbar {
-  width: 5rem;
+  width: 6rem;
   height: 100vh;
   position: fixed;
   top: 1rem;
@@ -12,120 +12,73 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  gap: 0.3rem;
   justify-content: space-evenly;
-  padding: 1rem;
   cursor: pointer;
+  background: transparent;
 
   .portfolio {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.2rem;
     text-decoration: none;
     font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
     position: fixed;
-    top: 0.5rem;
+    top: 0.3rem;
     right: 1rem;
-    color: rgba(142, 0, 46, 1);
     z-index: 25;
+    color: antiquewhite;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
   }
 
-  a.portfolio {
-    color: rgba(142, 0, 46, 1);
-    color: linear-gradient(0deg, rgba(142, 0, 46, 1) 0%, rgba(0, 0, 0, 1) 84%);
-  }
 
   .portfolio span:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
     transition: all 0.5s ease;
-    color: rgb(146, 122, 122);
+     background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+     border-radius: 0.7rem;
   }
 
   .navlist {
-    text-transform: capitalize;
     padding: 0.1rem;
     font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
-    text-align: center;
+    list-style-type: none;
   }
-
-  .navlist-corners {
-    position: relative;
-    display: inline-block;
-    margin: 0;
-    padding: 2px;
-    font-size: 20px;
-    text-align: center;
-    vertical-align: top;
-    font-weight: 400;
-    color: antiquewhite;
-    border: 1px solid #5d4e50;
-    writing-mode: vertical-lr;
-    border-radius: 0.5rem;
-  }
-
-  .navlist-corners:not(:last-child) {
-    margin-right: 2px;
-  }
-
-  .navlist-corners::before,
-  .navlist-corners::after {
-    content: "";
-    position: absolute;
-    background-color: #626065;
-    z-index: 0;
-    transition: 200ms ease-in;
-    transform-origin: center center;
-        border-radius: 0.5rem;
-  }
-
-  .navlist:target .navlist-corners::before,
-  .navlist:target .navlist-corners::after {
-    background-color: rgba(0, 0, 0, 0.6);
-    transition-duration: 600ms;
-  }
-
-  .navlist-corners::before {
-    width: calc(100% + 2px * 2 - 5px);
-    height: calc(100% + 2px * 2 - 5px);
-    top: 1px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .navlist-corners::after {
-    height: calc(100% + 2px * 2 - 10px);
-    width: calc(100% + 2px * 2 - 10px);
-    left: 2px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .navlist-corners:hover::before {
-    width: 0;
-  }
-
-  .navlist-corners:hover::after {
-    height: 0;
-  }
-
+  
   .navlist-corners a {
-    position: relative;
-    display: inline-block;
-    color: antiquewhite;
-    text-transform: uppercase;
-    text-decoration: none;
-    line-height: 1em;
-    font-size: 0.7em;
-    padding: 5px 20px;
-    margin: 0 2px;
+    font-size: 1rem;
+    vertical-align: top;
+     text-decoration: none;
+     color: antiquewhite;
+    writing-mode: vertical-lr;
+      background: black;
+    box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    padding: 0.5rem;
+    border: 0.1rem solid hsl(0, 0%, 22%);
+    border-radius: 0.8rem;
+    transition: all 0.5s ease;
     z-index: 1;
   }
 
-  .navlist-corners a::after {
-    content: attr(data-number);
-    display: block;
-    font-family: Lora;
-    font-style: italic;
+    .navlist-corners a:hover{
+  border: none;
+         background: #03e9f4;
+    color: #050801;
+      padding: 1rem 1rem;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect: 0.1rem linear-gradient(transparent, #0005);
   }
 
   .social-links {
@@ -134,7 +87,6 @@
     gap: 0.5rem;
     text-decoration: none;
     list-style: none;
-    margin-bottom: 0.8rem;
   }
 
   .social-links a {
@@ -148,12 +100,7 @@
     z-index: 1;
     position: relative;
     color: antiquewhite;
-    background: rgb(142, 0, 46);
-    background: linear-gradient(
-      90deg,
-      rgba(142, 0, 46, 1) 0%,
-      rgba(0, 0, 0, 1) 100%
-    );
+    background:black;
   }
 
   .social-links a::before {
@@ -172,10 +119,109 @@
   .social-links a:hover {
     transform: scale(1.5);
     transition: all 0.5s ease;
-    color: rgb(146, 122, 122);
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
   }
 
   .logo {
     width: 100%;
+  }
+
+  .logo:hover{
+        background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:left 1px linear-gradient(transparent, #0005);
+     border-radius: 3rem;
+  }
+
+  .mode {
+
+  .glowing-btn {
+    background: black;
+    box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    color: antiquewhite;
+    padding: .7rem 0.8rem;
+    border: 1px solid hsl(0, 0%, 22%);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
+
+.glowing-txt {
+ padding: 10px 3px;
+  background-color: transparent;
+  color: antiquewhite;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.faulty-letter {
+  opacity: 0.5;
+  animation: faulty-flicker 2s linear infinite;
+}
+
+.glowing-txt:hover {
+background: #03e9f4;
+    color: #050801;
+    padding: 0.8rem;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+@keyframes faulty-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 0.1;
+  }
+  4% {
+    opacity: 0.5;
+  }
+  19% {
+    opacity: 0.5;
+  }
+  21% {
+    opacity: 0.1;
+  }
+  23% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  83% {
+    opacity: 0.4;
+  }
+
+  87% {
+    opacity: 1;
+  }
+}
+
+  }
+}
+}
+
+   @media screen and (max-width: 767px) {
+  .navbar {
+    position: absolute;
   }
 }

@@ -2,10 +2,13 @@ import "../styles/Skills.scss";
 import { skillsFrontData } from "../constant/data";
 import { skillsBackData } from "../constant/data";
 import { skillsToolsData } from "../constant/data";
+import { useTheme } from "../context/ThemeContext";
 
 function Skills() {
+  const { theme } = useTheme();
+
   return (
-    <section id="/skills" className="skills">
+    <section id="/skills" className={`skills ${theme}`}>
       <div className="heading">
         <h1>Skills</h1>
       </div>

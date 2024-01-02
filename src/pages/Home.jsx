@@ -5,16 +5,19 @@ import AboutMe from "./AboutMe";
 import Skills from "./Skills";
 import Contact from "./Contact";
 import MyProjects from "./MyProjects";
+import { useTheme } from "../context/ThemeContext";
 
 function Home() {
+    const { theme } = useTheme();
+
   return (
-    <main className="home">
+    <main className={`home ${theme}`}>
       <NavBar />
       <Header />
-    <AboutMe />
-    <Skills />
-    <MyProjects />
-    <Contact />
+      <AboutMe />
+      <Skills />
+      <MyProjects />
+      <Contact />
     </main>
   );
 }

@@ -2,11 +2,14 @@ import "../styles/MyProjects.scss";
 import { projetsData } from "../constant/data";
 import { GiEarthAsiaOceania } from "react-icons/gi";
 import { RiGithubFill } from "react-icons/ri";
+import { useTheme } from "../context/ThemeContext";
 
 function MyProjects() {
+const { theme } = useTheme();
+
   return (
     <section>
-      <div id="/projects" className="projects">
+      <div id="/projects" className={`projects ${theme}`}>
         <h1 className="heading">Mes Projets</h1>
         <div className="project-container">
           <ul className="project-box">

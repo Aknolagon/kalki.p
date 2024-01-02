@@ -1,7 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Dancing+Script&family=Kanit:wght@500&family=Poppins&display=swap");
+@import "./variables";
 
 .about-me {
   margin-top: 10rem;
+
+  &.light {
+    .heading {
+      color: $primary-color-light;
+    }
+
+    .about-dev {
+      color: $primary-color-light;
+    }
+    .about-left {
+      color: $primary-color-light;
+    }
+
+    .front-end,
+    .back-end {
+      color: $primary-color-light;
+    }
+
+    .about-paragraph {
+      color: rgb(0, 0, 0);
+      color: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(3, 233, 244, 1) 49%,
+        rgba(0, 0, 0, 1) 86%
+      );
+    }
+  }
 
   .heading {
     font-size: 3.3rem;
@@ -10,10 +39,8 @@
     text-decoration: none;
     font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
-        color: rgb(102, 2, 34);
-    color: linear-gradient(0deg, rgba(142, 0, 46, 1) 0%, rgba(0, 0, 0, 1) 84%);
+    color: antiquewhite;
   }
-
 
   .about-content {
     display: grid;
@@ -26,7 +53,7 @@
 
     h2 {
       position: absolute;
-      bottom: 90%;
+      bottom: 95%;
       left: 50%;
       transform: translateX(-50%);
       font-size: 2rem;
@@ -70,8 +97,8 @@
         width: 2px;
         height: 100%;
         background-color: #8e9540;
-        animation: lightningAnimation 2s linear infinite;
-        transform-origin: 50% 0;
+        animation: lightningAnimation 3s linear infinite;
+        transform-origin: 80% 0;
       }
     }
     h3 {
@@ -160,10 +187,83 @@
   .about-paragraph {
     font-size: 1.5rem;
     margin: 2rem 0 3rem;
-    margin-right: 10rem;
+    margin-right:8rem;
     font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
     color: antiquewhite;
-    text-align: center;
+    text-align: right;
+   margin-bottom: 5rem;
   }
 }
+
+@media only screen and (min-width: 1600px) {
+  .about-me {
+    .heading {
+      font-size: 4rem;
+    }
+    .about-right {
+      margin-bottom: 5rem;
+
+      .about-paragraph {
+        margin-top: 5rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .about-me {
+
+    .about-left {
+      margin-top: 15rem;
+      margin-bottom: 15rem;
+
+    }
+  
+ .about-paragraph {
+        font-size: 1.3rem;
+        margin-bottom: 10rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+  .about-me {
+
+    .about-left {
+      margin-top: 15rem;
+      margin-bottom: 15rem;
+
+    }
+  
+ .about-paragraph {
+        font-size: 1.3rem;
+        margin-bottom: 10rem;
+      }
+    }
+  }
+
+   @media screen and (max-width: 767px) {
+      .about-me {
+
+    .heading {
+      margin: 0;
+    }
+
+
+    .about-left {
+  left: 25%;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+    }
+
+
+  
+ .about-paragraph {
+        font-size: 0.9rem;
+        margin-right: 10%;
+        margin-bottom: 0.1rem;
+      }
+    }
+  }

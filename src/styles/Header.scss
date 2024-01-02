@@ -1,6 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Dancing+Script&family=Kanit:wght@500&family=Poppins&display=swap");
+@import "./variables";
 
 .header {
+  &.light {
+    .header-left {
+      color: $primary-color-light;
+    }
+    .para {
+      color: $primary-color-light;
+    }
+  }
   .header-container {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -8,18 +17,28 @@
     align-items: center;
   }
 
-  .header-left {
-    position: relative;
-    left: 3rem;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
-  .header-left .name {
+  .header-left {
     color: antiquewhite;
     text-decoration: none;
   }
 
-  .header-left h1 {
-    font-size: 3rem;
+  .header-left {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 3rem;
+    font-size: 2.5rem;
     font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
     color: antiquewhite;
@@ -39,13 +58,9 @@
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: 0.7px rgb(6, 6, 6);
-    background-image: linear-gradient(
-      0deg,
-      rgba(142, 0, 46, 1) 0%,
-      rgba(0, 0, 0, 1) 84%
-    );
+    background-image: linear-gradient(90deg, black, #03e9f4);
     background-repeat: no-repeat;
-    -webkit-background-clip: text;
+    background-clip: text;
     background-position: -33rem 0;
     animation: homebgText 6s linear infinite;
     animation-delay: 2s;
@@ -124,43 +139,95 @@
     align-items: center;
     gap: 5px;
     cursor: pointer;
-  }
+    user-select: none;
+    transition: color 0.3s ease;
 
-  .header-like {
-    color: rgb(142, 0, 46);
-  }
+    &.liked {
+      color: rgb(169, 36, 36);
+    }
 
-  .header-comment {
-    color: #262626;
+    .header-like {
+      margin-right: 2rem;
+    }
+    .header-icon {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .header-comment {
+      cursor: pointer;
+    }
+
+    .comments {
+      margin-top: 10px;
+      max-height: 100px;
+      overflow-y: auto;
+
+      .comment {
+        padding: 5px;
+        margin-bottom: 5px;
+      }
+    }
+      input {
+        border-radius: 1rem;
+        padding: 0.5rem 0.1rem;
+        background-color: black;
+        color: antiquewhite;
+      }
+
+      input:hover {
+        transform: scale(1.1);
+        transition: all 0.5s ease;
+        color: #03e9f4;
+        padding: 0.8rem;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+          0 0 200px #03e9f4;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+      }
+
+      ::placeholder {
+        color: antiquewhite;
+        text-align: center;
+        font-family: "Kanit", sans-serif;
+        font-family: "Poppins", sans-serif;
+      }
   }
 
   .btns {
-    display: inline-block;
-    width: fit-content;
-    align-items: center;
-    gap: 1rem;
-    background: linear-gradient(
-      90deg,
-      rgba(142, 0, 46, 1) 0%,
-      rgba(0, 0, 0, 1) 100%
-    );
+    background: black;
     box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
     color: antiquewhite;
-    padding: 0.9rem 3rem;
+    padding: 0.7rem 0.8rem;
     border: 1px solid hsl(0, 0%, 22%);
-    border-radius: 2rem;
-    font-weight: 500;
+    border-radius: 1rem;
     cursor: pointer;
     transition: all 0.5s ease;
     font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
-    margin-left: 1rem;
   }
 
-  .btns:hover {
+  .btns-txt {
+    padding: 20px 3px;
+    font-size: 1rem;
+    background-color: transparent;
+    color: antiquewhite;
+    font-weight: 500;
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .btns-txt:hover {
     transform: scale(1.1);
     transition: all 0.5s ease;
-    color: rgb(146, 122, 122);
+    background: #03e9f4;
+    color: #050801;
+    padding: 0.8rem;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+      0 0 200px #03e9f4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
   }
 
   @keyframes homebgText {
@@ -205,11 +272,40 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1024px) {
+.imageContainer:hover {
+  transform: scale(1.5);
+  transition: all 0.5s ease;
+  background: #03e9f4;
+  color: #050801;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  border-radius: 0.7rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .glowing-btn {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1600px) {
   .header {
-    body {
-      font-size: 1rem;
+  .header-container {
+    gap: 10rem;
+  }
+
+  .header-left {
+    margin-top: 2rem;
+    h1 {
+    font-size: 4rem;
     }
+
+    .para {
+      font-size: 1.5rem;
+    }
+  }
+
 
     .container {
       width: 100%;
@@ -229,3 +325,79 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .header {
+   .header-left {
+ h1 {
+      font-size: 3rem;
+ }
+
+  
+ .para {
+        font-size: 1.3rem;
+      }
+    }
+
+    .header-right {
+      width:75%;
+
+        .header-action {
+    display: flex;
+    user-select: none;
+    transition: color 0.3s ease;
+
+      .btns {
+        display: none;
+      }
+
+      .btns-txt {
+display: none;
+      }
+
+      input {
+width: 50%;
+margin-left: 1rem;
+      }
+    }
+  }
+}
+}
+
+  @media screen and (max-width: 767px) {
+ .header {
+   .header-left {
+    left:5%;
+ h1 {
+      font-size: 2rem;
+ }
+ 
+.text-animate {
+  font-size: 1.3rem;
+  width: 100%;
+}
+  
+ .para {
+        font-size: 0.5rem;
+      }
+    }
+
+    .header-right {
+      width:90%;
+        .header-action {
+    display: flex;
+    transition: color 0.3s ease;
+    
+      .btns {
+        width: 50%;
+        margin-left: 5rem;
+      }
+
+      input {
+display: none;
+      }
+
+    }
+  }
+}
+ }
