@@ -9,9 +9,9 @@ import nodejs from "/src/assets/skills/nodejs.svg";
 import mysql from "/src/assets/skills/mysql-icon.svg";
 import google from "/src/assets/skills/google.png";
 import express from "/src/assets/skills/expressjs.svg";
-import babyplace from "/src/assets/history/babyplace.png";
-import juracine from "/src/assets/history/juracine.png";
-import portfolio from "/src/assets/history/portfolio.png";
+import babyplace from "/src/assets/history/babyplace.webp";
+import juracine from "/src/assets/history/juracine.webp";
+import portfolio from "/src/assets/history/portfolio.webp";
 
 export const skillsFrontData = [
   {
@@ -100,7 +100,7 @@ export const projetsData = [
     img: portfolio,
     title: "Portfolio (Fini)",
     text: "Projet Front-End (HTML, SASS, JS, ReactJs)",
-    url: "in progress",
+    url: "https://projet-portfolio-kappa.vercel.app/",
     github: "https://github.com/Aknolagon/projet-portfolio.git",
   },
 ];
