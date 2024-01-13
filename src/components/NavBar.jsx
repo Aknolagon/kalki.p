@@ -28,8 +28,13 @@ function NavBar() {
           <span>Portfolio</span>
         </a>
         <ul className="navbar-links">
-          <Link to="/" className="navbar-link" smooth={true} duration={100}>
-            <li className="navbar-item slideInDown-1">Accueil</li>
+          <Link
+            to="/"
+            className="navbar-link slideInDown-1"
+            smooth={true}
+            duration={100}
+          >
+            <li className="navbar-item">Accueil</li>
           </Link>
           {/* <li className="navbar-item slideInDown-2">
             <Link
@@ -43,7 +48,7 @@ function NavBar() {
           </li> */}
           <Link
             to="/skills"
-            className="navbar-link"
+            className="navbar-link slideInDown-2"
             smooth={true}
             duration={100}
           >
@@ -51,7 +56,7 @@ function NavBar() {
           </Link>
           <Link
             to="/projects"
-            className="navbar-link"
+            className="navbar-link slideInDown-3"
             smooth={true}
             duration={100}
           >
@@ -59,7 +64,7 @@ function NavBar() {
           </Link>
           <Link
             to="/contact"
-            className="navbar-link"
+            className="navbar-link slideInDown-4"
             smooth={true}
             duration={100}
           >

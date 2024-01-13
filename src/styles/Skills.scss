@@ -1,7 +1,7 @@
 @import "./variables";
 
 .skills {
-   margin-top: 10rem;
+   margin-top: 15rem;
 
      &.light {
     .heading {
@@ -43,10 +43,10 @@
     background: transparent;
     position: relative;
     border: 1px solid black;
-    padding: 0;
   }
 
     .contents {
+      margin-left: 1rem;
       .skills-set {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -112,6 +112,7 @@
 
 @media screen and (max-width: 768px) {
 .skills {
+
     .contents {
       text-align: center;
       justify-content: center;

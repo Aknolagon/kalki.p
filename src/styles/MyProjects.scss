@@ -149,21 +149,45 @@
 
 @media screen and (max-width: 767px) {
   .projects {
-  margin: auto;
     .project-box {
-        width: 100%;
-        margin-left: -2.4rem;
+      width: 90%;
+      margin-left: -1.3rem;
+      display: flex;
+      flex-direction: column;
 
-
-        .project-layer:hover{
-             transform: scale(1.5);
-    transition: all 0.5s ease;
-        }
-
-
-      .project-text, h2, p{
-   font-size: 0.7rem;
+      .glowing-btn {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        background: black;
+        box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+        color: antiquewhite;
+        padding: 0.8rem 1rem;
+        border: 1px solid hsl(0, 0%, 22%);
+        border-radius: 1rem;
+        cursor: pointer;
+        font-family: "Kanit", sans-serif;
+        font-family: "Poppins", sans-serif;
       }
+
+      .glowing-btn:hover {
+        background: #03e9f4;
+        color: black;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+          0 0 200px #03e9f4;
       }
     }
+
+    .project-layer:hover {
+      transform: scale(1.1);
+      transition: all 0.5s ease;
+    }
+
+    .project-text h2 {
+      font-size: 1rem;
+    }
+
+    .project-text p {
+      font-size: 0.9rem;
+    }
   }
+}
