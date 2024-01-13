@@ -1,6 +1,6 @@
 import "../styles/Header.scss";
 import { motion } from "framer-motion";
-import aboutMe from "../assets/Profile.webp";
+import aboutMe from "../assets/Profile2.webp";
 import scroll from "../assets/scroll.png";
 import { useTheme } from "../context/ThemeContext";
 
