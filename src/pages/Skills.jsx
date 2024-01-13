@@ -1,4 +1,5 @@
 import "../styles/Skills.scss";
+import { motion } from "framer-motion";
 import { skillsFrontData } from "../constant/data";
 import { skillsBackData } from "../constant/data";
 import { skillsToolsData } from "../constant/data";
@@ -7,8 +8,29 @@ import { useTheme } from "../context/ThemeContext";
 function Skills() {
   const { theme } = useTheme();
 
+  const textVariants = {
+    initial: {
+      x: -500,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   return (
-    <section id="/skills" className={`skills ${theme}`}>
+    <motion.section
+      variants={textVariants}
+      initial="initial"
+      animate="animate"
+      id="/skills"
+      className={`skills ${theme}`}
+    >
       <div className="heading">
         <h1>Skills</h1>
       </div>
@@ -41,7 +63,7 @@ function Skills() {
           ))}
         </ul>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

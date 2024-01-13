@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { Player } from "@lottiefiles/react-lottie-player";
 import emailjs from "@emailjs/browser";
-import Lottie from "react-lottie-player";
-import mailJson from "../lotties/mail.json";
+import animationData from "../lotties/mail.json";
 import { useTheme } from "../context/ThemeContext";
 import "../styles/Contact.scss";
 
@@ -12,13 +13,13 @@ function Contact() {
   const [firstname, setFirstname] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+const serviceId = import.meta.env.VITE_APP_SERVICE_ID;
+const templateId = import.meta.env.VITE_APP_TEMPLATE_ID;
+const publicKey = import.meta.env.VITE_APP_PUBLIC_KEY;
 
   const sendEmail = (event) => {
     alert("Message envoyé");
     event.preventDefault();
-    const serviceId = "service_6mgaapt"; 
-    const templateId = "template_74l8x3g";
-    const publicKey = "c5ZVnBgpfN-AumguN";
 
     emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
       (result) => {
@@ -34,25 +35,39 @@ function Contact() {
     );
   };
 
+  const textVariants = {
+    initial: {
+      x: -500,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
   return (
-    <section id="/contact" className={`contact ${theme}`}>
+    <motion.section variants={textVariants} initial="initial" animate="animate" id="/contact" className={`contact ${theme}`}>
       <div className="title">
         <h2 className="heading">Me Contacter</h2>
       </div>
-      <Lottie
-      className="lottie"
-        loop
-        animationData={mailJson}
-        play
-        style={{ width: 1450, height: 250 }}
-      />
+      <Player className="lottie" loop src={animationData} autoplay />
       <div className="contact-container">
-        <form ref={form} className="contact-form" onSubmit={sendEmail}>
+        <form
+          id="form"
+          ref={form}
+          className="contact-form"
+          onSubmit={sendEmail}
+        >
           <div className="form-name">
             <input
               type="text"
               name="firstname"
-              id=""
+              id="firstname"
               value={firstname}
               onChange={(event) => setFirstname(event.target.value)}
               placeholder="Votre Prénom"
@@ -61,7 +76,7 @@ function Contact() {
             <input
               type="text"
               name="lastname"
-              id=""
+              id="lastname"
               value={lastname}
               onChange={(event) => setLastname(event.target.value)}
               placeholder="Votre Nom"
@@ -71,7 +86,8 @@ function Contact() {
           <input
             type="email"
             name="email"
-            id=""
+            id="mail"
+            autoComplete="off"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             placeholder="Votre email"
@@ -79,7 +95,7 @@ function Contact() {
           />
           <textarea
             name="message"
-            id=""
+            id="message"
             cols="30"
             rows="10"
             value={message}
@@ -95,7 +111,7 @@ function Contact() {
       <div className="copyright">
         <p>Droits réservés. Ce portfolio a été réalisé par KALKI Prasanna.</p>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

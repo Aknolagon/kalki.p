@@ -15,43 +15,61 @@ function NavBar() {
     handleTheme();
   };
 
+  const [showLinks, setShowLinks] = useState(false);
+
+  const handleShowLinks = () => {
+    setShowLinks(!showLinks);
+  };
+
   return (
-    <nav className="navbar">
-      <div className="container nav-container">
+    <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"} `}>
+      <div className="nav-container">
         <a href="" className="portfolio">
           <span>Portfolio</span>
         </a>
-        <ul className="navlist">
-          <li className="navlist-corners">
-            <Link to="/" className="active" smooth={true} duration={100}>
-              Accueil
-            </Link>
-          </li>
-          <li className="navlist-corners">
-            <Link to="/aboutme" className="active" smooth={true} duration={100}>
-              À propos
-            </Link>
-          </li>
-          <li className="navlist-corners">
-            <Link to="/skills" className="active" smooth={true} duration={100}>
-              Skills
-            </Link>
-          </li>
-          <li className="navlist-corners">
+        <ul className="navbar-links">
+          <Link
+            to="/"
+            className="navbar-link slideInDown-1"
+            smooth={true}
+            duration={100}
+          >
+            <li className="navbar-item">Accueil</li>
+          </Link>
+          {/* <li className="navbar-item slideInDown-2">
             <Link
-              to="/projects"
-              className="active"
+              to="/aboutme"
+              className="navbar-link"
               smooth={true}
               duration={100}
             >
-              Mes Projets
+              À propos
             </Link>
-          </li>
-          <li className="navlist-corners">
-            <Link to="/contact" className="active" smooth={true} duration={100}>
-              Me Contacter
-            </Link>
-          </li>
+          </li> */}
+          <Link
+            to="/skills"
+            className="navbar-link slideInDown-2"
+            smooth={true}
+            duration={100}
+          >
+            <li className="navbar-item">Skills</li>
+          </Link>
+          <Link
+            to="/projects"
+            className="navbar-link slideInDown-3"
+            smooth={true}
+            duration={100}
+          >
+            <li className="navbar-item">Mes Projets</li>
+          </Link>
+          <Link
+            to="/contact"
+            className="navbar-link slideInDown-4"
+            smooth={true}
+            duration={100}
+          >
+            <li className="navbar-item">Me Contacter</li>
+          </Link>
         </ul>
       </div>
       <div className="mode">
@@ -92,14 +110,22 @@ function NavBar() {
           </a>
         </li>
         <li>
-          <Link to="/contact" className="active" smooth={true} duration={100}>
+          <Link to="/contact" smooth={true} duration={100}>
             <BiLogoGmail />
           </Link>
         </li>
       </div>
-      <a href="" className="home-logo" to="/">
+      <a href="" className="home-logo slideInDown-8" to="/">
         <img className="logo" src={Logo} alt="logo" />
       </a>
+      <button
+        className="navbar-burger"
+        type="button"
+        onClick={handleShowLinks}
+        aria-label={showLinks ? "Close-Burger" : "Open-Burger"}
+      >
+        <span className="burger-bar" />
+      </button>
     </nav>
   );
 }
