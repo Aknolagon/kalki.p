@@ -13,9 +13,10 @@ function Contact() {
   const [firstname, setFirstname] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-const serviceId = import.meta.env.VITE_APP_SERVICE_ID;
-const templateId = import.meta.env.VITE_APP_TEMPLATE_ID;
-const publicKey = import.meta.env.VITE_APP_PUBLIC_KEY;
+
+const serviceId = "service_6mgaapt";
+const templateId = "template_74l8x3g";
+const publicKey = "c5ZVnBgpfN-AumguN";
 
   const sendEmail = (event) => {
     alert("Message envoyé");
