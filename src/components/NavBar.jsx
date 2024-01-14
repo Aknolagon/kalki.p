@@ -28,14 +28,12 @@ function NavBar() {
           <span>Portfolio</span>
         </a>
         <ul className="navbar-links">
-          <Link
-            to="/"
-            className="navbar-link slideInDown-1"
-            smooth={true}
-            duration={100}
-          >
-            <li className="navbar-item">Accueil</li>
-          </Link>
+          <li className="navbar-link slideInDown-1">
+            <Link to="/" className="navbar-item" smooth={true} duration={100}>
+              Accueil
+            </Link>
+          </li>
+
           {/* <li className="navbar-item slideInDown-2">
             <Link
               to="/aboutme"
@@ -46,30 +44,36 @@ function NavBar() {
               À propos
             </Link>
           </li> */}
-          <Link
-            to="/skills"
-            className="navbar-link slideInDown-2"
-            smooth={true}
-            duration={100}
-          >
-            <li className="navbar-item">Skills</li>
-          </Link>
-          <Link
-            to="/projects"
-            className="navbar-link slideInDown-3"
-            smooth={true}
-            duration={100}
-          >
-            <li className="navbar-item">Mes Projets</li>
-          </Link>
-          <Link
-            to="/contact"
-            className="navbar-link slideInDown-4"
-            smooth={true}
-            duration={100}
-          >
-            <li className="navbar-item">Me Contacter</li>
-          </Link>
+          <li className="navbar-link slideInDown-2">
+            <Link
+              to="/skills"
+              className="navbar-item"
+              smooth={true}
+              duration={100}
+            >
+              Skills
+            </Link>
+          </li>
+          <li className="navbar-link slideInDown-3">
+            <Link
+              to="/projects"
+              className="navbar-item"
+              smooth={true}
+              duration={100}
+            >
+              Mes Projets
+            </Link>
+          </li>
+          <li className="navbar-link slideInDown-4">
+            <Link
+              to="/contact"
+              className="navbar-item"
+              smooth={true}
+              duration={100}
+            >
+              Me Contacter
+            </Link>
+          </li>
         </ul>
       </div>
       <div className="mode">
@@ -90,12 +94,13 @@ function NavBar() {
           </span>
         </button>
       </div>
-      <div className="social-links">
+      <ul className="social-links">
         <li>
           <a
             href="https://www.linkedin.com/in/prasanna-kalki-64b5231b4/"
             target="_blank"
             rel="noreferrer"
+            aria-label="Linkedin"
           >
             <RiLinkedinFill />
           </a>
@@ -105,18 +110,19 @@ function NavBar() {
             href="https://github.com/Aknolagon"
             target="_blank"
             rel="noreferrer"
+            aria-label="Github"
           >
             <RiGithubFill />
           </a>
         </li>
         <li>
-          <Link to="/contact" smooth={true} duration={100}>
+          <Link to="/contact" smooth={true} duration={100} aria-label="Email">
             <BiLogoGmail />
           </Link>
         </li>
-      </div>
+      </ul>
       <a href="" className="home-logo slideInDown-8" to="/">
-        <img className="logo" src={Logo} alt="logo" />
+        <img className="logo" src={Logo} alt="logo" aria-label="Logo" />
       </a>
       <button
         className="navbar-burger"

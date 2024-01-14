@@ -7,7 +7,7 @@ import visual from "/src/assets/skills/visual.svg";
 import figma from "/src/assets/skills/figma.svg";
 import nodejs from "/src/assets/skills/nodejs.svg";
 import mysql from "/src/assets/skills/mysql-icon.svg";
-import google from "/src/assets/skills/google.png";
+import google from "/src/assets/skills/google.webp";
 import express from "/src/assets/skills/expressjs.svg";
 import babyplace from "/src/assets/history/babyplace.webp";
 import juracine from "/src/assets/history/juracine.webp";
