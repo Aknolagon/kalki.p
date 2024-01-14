@@ -56,14 +56,15 @@ function Header() {
   };
 
   return (
-    <section id="/" className={`header ${theme}`}>
-      <motion.div
-        className="container header-container"
-        variants={textVariants}
-        initial="initial"
-        animate="animate"
-      >
-        <motion.div className="header-left" variants={textVariants}>
+    <motion.section
+      variants={textVariants}
+      initial="initial"
+      animate="animate"
+      id="/"
+      className={`header ${theme}`}
+    >
+      <div className="container header-container">
+        <div className="header-left" variants={textVariants}>
           <h1>Hello, je suis Prasanna KALKI</h1>
           <h2 className="text-animate">Un Développeur Web et Web Mobile</h2>
           <p className="para">
@@ -71,11 +72,11 @@ function Header() {
             commencé ma carrière en tant que Business Developper, j’ai eu envie
             de travailler dans un domaine qui me tenait à cœur et cela depuis
             plusieurs années. C&apos;est pourquoi, j&apos;ai commencé une
-            formation à la Wild Code School afin de devenir un Développeur Web et Web
-            Mobile, il y a maintenant 4 mois.
+            formation à la Wild Code School afin de devenir un Développeur Web
+            et Web Mobile, il y a maintenant 4 mois.
           </p>
-        </motion.div>
-        <motion.div className="header-right" variants={textVariants}>
+        </div>
+        <div className="header-right" variants={textVariants}>
           <div className="img-header">
             <img src={avatar} alt="Prasanna" className="user-avatar" />
             <div className="username">Aknolagon</div>
@@ -93,17 +94,17 @@ function Header() {
               </button>
             </div>
           </div>
-        </motion.div>
-        <motion.div
+        </div>
+        <div
           className="imageContainer"
           animate="scrollButton"
           variants={textVariants}
           onClick={handleScrollButtonClick}
         >
           <img className="img-scroll" src={scroll} alt="" />
-        </motion.div>
-      </motion.div>
-    </section>
+        </div>
+      </div>
+    </motion.section>
   );
 }
 
