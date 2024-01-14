@@ -1,4 +1,4 @@
-Link to my Portfolio : https://kalkiprasanna.netlify.app/
+Link to my Portfolio : https://kalkiprasanna.versel.app/
 
 
 Enjoy!
