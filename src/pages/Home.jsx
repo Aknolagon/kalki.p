@@ -1,4 +1,5 @@
 import "../styles/Home.scss";
+import { Analytics } from "@vercel/analytics/react";
 import NavBar from "../components/NavBar";
 import Header from "../components/Header";
 import AboutMe from "./AboutMe";
@@ -12,6 +13,7 @@ function Home() {
 
   return (
     <main className={`home ${theme}`}>
+      <Analytics />
       <NavBar />
       <Header />
       <AboutMe />
