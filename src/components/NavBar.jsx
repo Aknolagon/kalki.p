@@ -29,23 +29,13 @@ function NavBar() {
         </a>
         <ul className="navbar-links">
           <li className="navbar-link slideInDown-1">
-            <Link to="/" className="navbar-item" smooth={true} duration={100}>
+            <Link href="" to="/" className="navbar-item" smooth={true} duration={100}>
               Accueil
             </Link>
           </li>
-
-          {/* <li className="navbar-item slideInDown-2">
-            <Link
-              to="/aboutme"
-              className="navbar-link"
-              smooth={true}
-              duration={100}
-            >
-              À propos
-            </Link>
-          </li> */}
           <li className="navbar-link slideInDown-2">
             <Link
+            href=""
               to="/skills"
               className="navbar-item"
               smooth={true}
@@ -55,7 +45,7 @@ function NavBar() {
             </Link>
           </li>
           <li className="navbar-link slideInDown-3">
-            <Link
+            <Link href=""
               to="/projects"
               className="navbar-item"
               smooth={true}
@@ -65,7 +55,7 @@ function NavBar() {
             </Link>
           </li>
           <li className="navbar-link slideInDown-4">
-            <Link
+            <Link href=""
               to="/contact"
               className="navbar-item"
               smooth={true}
@@ -116,7 +106,7 @@ function NavBar() {
           </a>
         </li>
         <li>
-          <Link to="/contact" smooth={true} duration={100} aria-label="Email">
+          <Link href="" to="/contact" smooth={true} duration={100} aria-label="Email">
             <BiLogoGmail />
           </Link>
         </li>
