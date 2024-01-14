@@ -16,29 +16,199 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 10rem;
-    margin-left: 5rem;
+    margin-right: 7rem;
+    margin-left: 2rem;
 
     .glowing-btn {
-      margin-left: 0.5rem;
-      margin-right: 0.5rem;
-      border-radius: 5rem;
-      background: black;
-      box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-      color: antiquewhite;
-      padding: 0.8rem 1.4rem;
-      border: 1px solid hsl(0, 0%, 22%);
-      border-radius: 1rem;
+      position: relative;
+      color: $button-color;
+      margin-left: 2rem;
+      margin-right: 2rem;
       cursor: pointer;
+      padding: 0.38rem 1rem;
+      border: 0.15rem solid $button-color;
+      border-radius: 0.5rem;
+      background: none;
+      perspective: 2rem;
       font-family: "Kanit", sans-serif;
       font-family: "Poppins", sans-serif;
+      font-size: 2rem;
+      font-weight: 900;
+      -webkit-box-shadow: inset 0px 0px 0.5rem 0px $button-color,
+        0px 0px 0.5rem 0px $button-color;
+      -moz-box-shadow: inset 0px 0px 0.5rem 0px $button-color,
+        0px 0px 0.5rem 0px $button-color;
+      box-shadow: inset 0px 0px 0.5rem 0px $button-color,
+        0px 0px 0.5rem 0px $button-color;
+      animation: border-flicker 2s linear infinite;
+    }
+
+    .glowing-txt {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      -webkit-text-shadow: 0 0 0.125rem hsl(0 0% 100% / 0.3),
+        0 0 0.45rem $button-color;
+      -moz-text-shadow: 0 0 0.125rem hsl(0 0% 100% / 0.3),
+        0 0 0.45rem $button-color;
+      text-shadow: 0 0 0.125rem hsl(0 0% 100% / 0.3), 0 0 0.45rem $button-color;
+      animation: text-flicker 3s linear infinite;
+    }
+
+    .faulty-letter {
+      opacity: 0.5;
+      animation: faulty-flicker 2s linear infinite;
+    }
+
+    .glowing-btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.7;
+      filter: blur(1rem);
+      transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+      background: $button-color;
+      pointer-events: none;
+    }
+
+    .glowing-btn::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      z-index: -1;
+      background-color: $button-color;
+      box-shadow: 0 0 2rem 0.2rem $button-color;
+      transition: opacity 100ms linear;
     }
 
     .glowing-btn:hover {
-      background: #03e9f4;
       color: black;
-      box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
-        0 0 200px #03e9f4;
+      text-shadow: none;
+      animation: none;
+    }
+
+    .glowing-btn:hover .glowing-txt {
+      animation: none;
+    }
+
+    .glowing-btn:hover .faulty-letter {
+      animation: none;
+      text-shadow: none;
+      opacity: 1;
+    }
+
+    .glowing-btn:hover:before {
+      filter: blur(1.5rem);
+      opacity: 1;
+    }
+
+    .glowing-btn:hover:after {
+      opacity: 1;
+    }
+
+    @keyframes faulty-flicker {
+      0% {
+        opacity: 0.1;
+      }
+      2% {
+        opacity: 0.1;
+      }
+      4% {
+        opacity: 0.5;
+      }
+      19% {
+        opacity: 0.5;
+      }
+      21% {
+        opacity: 0.1;
+      }
+      23% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 0.5;
+      }
+      83% {
+        opacity: 0.4;
+      }
+
+      87% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes text-flicker {
+      0% {
+        opacity: 0.1;
+      }
+
+      2% {
+        opacity: 1;
+      }
+
+      8% {
+        opacity: 0.1;
+      }
+
+      9% {
+        opacity: 1;
+      }
+
+      12% {
+        opacity: 0.1;
+      }
+      20% {
+        opacity: 1;
+      }
+      25% {
+        opacity: 0.3;
+      }
+      30% {
+        opacity: 1;
+      }
+
+      70% {
+        opacity: 0.7;
+      }
+      72% {
+        opacity: 0.2;
+      }
+
+      77% {
+        opacity: 0.9;
+      }
+      100% {
+        opacity: 0.9;
+      }
+    }
+
+    @keyframes border-flicker {
+      0% {
+        opacity: 0.1;
+      }
+      2% {
+        opacity: 1;
+      }
+      4% {
+        opacity: 0.1;
+      }
+
+      8% {
+        opacity: 1;
+      }
+      70% {
+        opacity: 0.7;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   }
 
@@ -139,9 +309,56 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-top: 6rem ;
+
+      .glowing-btn {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        padding: 1rem 1.5rem;
+      }
+
+            .glowing-btn:first-child::before {
+            content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.7;
+      filter: blur(1rem);
+      transform: translateY(-120%) rotateX(95deg) scale(1, 0.35);
+      background: $button-color;
+      pointer-events: none;
+      }
+
+       .glowing-btn:first-child::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      z-index: -1;
+      background-color: $button-color;
+      box-shadow: 0 0 2rem 0.2rem $button-color;
+      transition: opacity 100ms linear;
+    }
+
+      .glowing-btn:hover {
+        background: #03e9f4;
+        color: black;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+          0 0 200px #03e9f4;
+      }
 
       .project-layer {
-        width: 80%;
+        width: 100%;
+      }
+
+      .project-layer:hover {
+        transform: scale(1.1);
+        transition: all 0.5s ease-in;
       }
     }
   }
@@ -158,22 +375,24 @@
       .glowing-btn {
         margin-bottom: 1rem;
         margin-top: 1rem;
-        background: black;
-        box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-        color: antiquewhite;
-        padding: 0.8rem 1rem;
-        border: 1px solid hsl(0, 0%, 22%);
-        border-radius: 1rem;
-        cursor: pointer;
-        font-family: "Kanit", sans-serif;
-        font-family: "Poppins", sans-serif;
       }
 
-      .glowing-btn:hover {
-        background: #03e9f4;
-        color: black;
-        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
-          0 0 200px #03e9f4;
+      .glowing-btn:first-child::before {
+            content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.7;
+      filter: blur(1rem);
+      transform: translateY(-80%) rotateX(-95deg) scale(1, 0.35);
+      background: $button-color;
+      pointer-events: none;
+      }
+
+      .glowing-txt {
+        padding: 0.3rem 0.3rem;
       }
     }
 

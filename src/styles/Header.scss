@@ -300,38 +300,50 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .header {
+    .header-container {
+      display: flex;
+      flex-direction: column;
+    }
     .header-left {
+      margin-right: 6rem;
       h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
+        text-align: center;
+        margin-right: 1.5rem;
+      }
+
+      .text-animate {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-left: 5rem;
+        margin: auto;
       }
 
       .para {
-        font-size: 1.3rem;
+        font-size: 1rem;
+        text-align: center;
       }
     }
 
     .header-right {
-      width: 75%;
+      width: 100%;
+      margin-top: 0.01rem;
 
-      .header-action {
+      .header-caption {
+        font-size: 1.3rem;
+        text-align: center;
+      }
+
+      .header-actions {
         display: flex;
-        user-select: none;
-        transition: color 0.3s ease;
+        transition: color 0.8s ease;
 
         .btns {
-          display: none;
-        }
-
-        .btns-txt {
-          display: none;
-        }
-
-        input {
-          width: 50%;
-          margin-left: 1rem;
+          padding: 0.8rem 1rem;
         }
       }
     }
+
   }
 }
 
@@ -349,25 +361,25 @@
       }
 
       h3 {
-    text-transform: capitalize;
-    margin: 0.5rem 0;
-    font-family: "Kanit", sans-serif;
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    color: transparent;
-    -webkit-text-stroke: 0.7px rgb(6, 6, 6);
-    background-image: linear-gradient(90deg, black, #03e9f4);
-    background-repeat: no-repeat;
-    background-clip: text;
-    background-position: -33rem 0;
-    animation: homebgText 3s linear infinite;
-    animation-delay: 3s;
-  }
+        text-transform: capitalize;
+        margin: 0.5rem 0;
+        font-family: "Kanit", sans-serif;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        color: transparent;
+        -webkit-text-stroke: 0.7px rgb(6, 6, 6);
+        background-image: linear-gradient(90deg, black, #03e9f4);
+        background-repeat: no-repeat;
+        background-clip: text;
+        background-position: -33rem 0;
+        animation: homebgText 3s linear infinite;
+        animation-delay: 3s;
+      }
 
-   h3::before {
-    animation: homeCursorText 10s linear infinite;
-    animation-delay: 10s;
-  }
+      h3::before {
+        animation: homeCursorText 10s linear infinite;
+        animation-delay: 10s;
+      }
 
       .text-animate {
         font-size: 2rem;
@@ -376,9 +388,9 @@
       }
 
       .para {
-        font-size: .9rem;
+        font-size: 0.9rem;
         text-align: center;
-        margin:auto;
+        margin: auto;
       }
     }
 
@@ -393,12 +405,12 @@
       .header-actions {
         display: flex;
         transition: color 0.8s ease;
-      
-      .btns {
-        padding: 0.55rem;
+
+        .btns {
+          padding: 0.55rem;
+        }
       }
     }
-  }
 
     .imageContainer {
       display: none;
