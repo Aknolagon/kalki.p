@@ -71,8 +71,8 @@ function Header() {
             commencé ma carrière en tant que Business Developper, j’ai eu envie
             de travailler dans un domaine qui me tenait à cœur et cela depuis
             plusieurs années. C&apos;est pourquoi, j&apos;ai commencé une
-            formation à la Wild Code School pour devenir Développeur Web et Web
-            Mobile il y a maintenant 4 mois.
+            formation à la Wild Code School afin de devenir un Développeur Web et Web
+            Mobile, il y a maintenant 4 mois.
           </p>
         </motion.div>
         <motion.div className="header-right" variants={textVariants}>
