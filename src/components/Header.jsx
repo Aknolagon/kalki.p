@@ -56,10 +56,10 @@ function Header() {
   };
 
   return (
-    <motion.section
-      variants={textVariants}
-      initial="initial"
-      animate="animate"
+    <section
+      // variants={textVariants}
+      // initial="initial"
+      // animate="animate"
       id="/"
       className={`header ${theme}`}
     >
@@ -104,7 +104,7 @@ function Header() {
           <img className="img-scroll" src={scroll} alt="" />
         </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 }
 
