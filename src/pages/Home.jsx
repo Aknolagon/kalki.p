@@ -13,13 +13,13 @@ function Home() {
 
   return (
     <main className={`home ${theme}`}>
-      <Analytics />
       <NavBar />
       <Header />
       <AboutMe />
       <Skills />
       <MyProjects />
       <Contact />
+      <Analytics />
     </main>
   );
 }
