@@ -1,7 +1,8 @@
 import "../styles/Header.scss";
 import { motion } from "framer-motion";
-import aboutMe from "../assets/Profile2.webp";
-import scroll from "../assets/scroll.png";
+import aboutMe from "../assets/Profile.webp";
+import avatar from "../assets/Avatar.webp";
+import scroll from "../assets/scroll.webp";
 import { useTheme } from "../context/ThemeContext";
 
 function Header() {
