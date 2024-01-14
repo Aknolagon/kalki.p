@@ -65,7 +65,7 @@ function Header() {
       >
         <motion.div className="header-left" variants={textVariants}>
           <h1>Hello, je suis Prasanna KALKI</h1>
-          <h3 className="text-animate">Un Développeur Web et Web Mobile</h3>
+          <h2 className="text-animate">Un Développeur Web et Web Mobile</h2>
           <p className="para">
             J&apos;ai des connaissances en Front-End et en Back-End. Après avoir
             commencé ma carrière en tant que Business Developper, j’ai eu envie

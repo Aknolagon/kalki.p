@@ -68,6 +68,7 @@ function MyProjects() {
                   href={projetsData[currentProject].url}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Current Project image"
                 >
                   <GiEarthAsiaOceania />
                 </a>
@@ -76,6 +77,7 @@ function MyProjects() {
                   href={projetsData[currentProject].github}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Current Project text"
                 >
                   <RiGithubFill />
                 </a>
