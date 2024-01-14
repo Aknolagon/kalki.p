@@ -83,7 +83,7 @@ export const projetsData = [
     img: babyplace,
     title: "Babyplace (En cours)",
     text: "Projet Front-End (HTML, Javascript, ReactJs, SASS) et Back-End (NodeJs, MySQL, ExpressJs)",
-    url: "in progress",
+    url: "https://baby.remote-6.wilders.dev",
     github:
       "https://github.com/WildCodeSchool-2023-09/JS-RemoteFR-jurascripts-P3-Babyplace.git",
   },
