@@ -77,7 +77,7 @@ function Header() {
         </motion.div>
         <motion.div className="header-right" variants={textVariants}>
           <div className="img-header">
-            <img src={aboutMe} alt="Prasanna" className="user-avatar" />
+            <img src={avatar} alt="Prasanna" className="user-avatar" />
             <div className="username">Aknolagon</div>
           </div>
           <img src={aboutMe} alt="photo" className="header-image" />
