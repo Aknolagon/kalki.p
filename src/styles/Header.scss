@@ -245,13 +245,13 @@
 .imageContainer {
   position: absolute;
   bottom: 5%;
-  left: 45%;
+  left: 48%;
   transform: translate(-50%, -50%);
   cursor: pointer;
-}
 
-.img-scroll {
-width: 50%;
+  .img-scroll {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 1600px) {
@@ -271,19 +271,6 @@ width: 50%;
         margin-bottom: 4rem;
       }
     }
-
-    .container {
-      width: 100%;
-    }
-
-    section {
-      padding: 8rem 0;
-    }
-
-    .title {
-      width: 70%;
-      margin: 0 auto 5rem;
-    }
   }
 }
 
@@ -295,7 +282,7 @@ width: 50%;
     }
     .header-left {
       margin-right: 6rem;
-     h1 {
+      h1 {
         font-size: 2.8rem;
         text-align: center;
         margin-right: 1.5rem;
@@ -332,7 +319,6 @@ width: 50%;
         }
       }
     }
-
   }
 }
 

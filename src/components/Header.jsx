@@ -95,14 +95,14 @@ function Header() {
             </div>
           </div>
         </div>
-        <div
+        <motion.div
           className="imageContainer"
           animate="scrollButton"
           variants={textVariants}
           onClick={handleScrollButtonClick}
         >
           <img className="img-scroll" src={scroll} alt="" />
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );
