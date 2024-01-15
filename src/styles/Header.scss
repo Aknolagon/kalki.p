@@ -257,7 +257,7 @@
 @media screen and (min-width: 1600px) {
   .header {
     .header-container {
-      gap: 10rem;
+      gap: 5rem;
     }
 
     .header-left {
@@ -269,6 +269,10 @@
       .para {
         font-size: 1.5rem;
         margin-bottom: 4rem;
+      }
+
+      .header-right {
+        width: 100%;
       }
     }
   }
