@@ -6,6 +6,7 @@ import gitImg from "/src/assets/skills/git.svg";
 import visual from "/src/assets/skills/visual.svg";
 import figma from "/src/assets/skills/figma.svg";
 import nodejs from "/src/assets/skills/nodejs.svg";
+import npm from "/src/assets/skills/Npm-logo.svg";
 import mysql from "/src/assets/skills/mysql-icon.svg";
 import google from "/src/assets/skills/google.webp";
 import express from "/src/assets/skills/expressjs.svg";
@@ -26,31 +27,36 @@ export const skillsFrontData = [
   },
   {
     id: 3,
-    img: sassImg,
-    title: "Sass",
+    img: reactImg,
+    title: "React",
   },
   {
     id: 4,
-    img: reactImg,
-    title: "React",
+    img: sassImg,
+    title: "Sass",
   },
 ];
 
 export const skillsBackData = [
   {
     id: 1,
+    img: express,
+    title: "EspressJs",
+  },
+  {
+    id: 2,
     img: mysql,
     title: "MySQL",
   },
   {
-    id: 2,
+    id: 3,
     img: nodejs,
     title: "NodeJs",
   },
   {
-    id: 3,
-    img: express,
-    title: "EspressJs",
+    id: 4,
+    img: npm,
+    title: "NPM",
   },
 ];
 
