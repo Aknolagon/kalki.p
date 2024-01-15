@@ -45,15 +45,14 @@
     font-family: "Kanit", sans-serif;
     font-family: "Poppins", sans-serif;
     padding: 5px 10px;
-
+    
     .navbar-link {
       background: black;
       border-radius:0.6rem;
       transition: 0.5s;
       border: none;
-      padding: 5px 5px;
     }
-
+    
     .navbar-item {
       writing-mode: vertical-lr;
       font-size: 1rem;
@@ -67,12 +66,17 @@
       padding: 10px 10px;
     }
 
-    .navbar-item:hover {
+    .navbar-link:hover {
       transition: all 0.5s ease;
-      background: #03e9f4;
       color: #050801;
+      background: #03e9f4;
       box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
         0 0 200px #03e9f4;
+    }
+
+
+    .navbar-item:hover {
+           color: #050801;
     }
   }
 
