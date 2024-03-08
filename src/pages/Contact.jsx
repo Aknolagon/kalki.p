@@ -1,9 +1,10 @@
-import { useRef, useState } from "react";
-import { motion } from "framer-motion";
-import { Player } from "@lottiefiles/react-lottie-player";
 import emailjs from "@emailjs/browser";
-import animationData from "../lotties/mail.json";
+import { Player } from "@lottiefiles/react-lottie-player";
+import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import Swal from "sweetalert2";
 import { useTheme } from "../context/ThemeContext";
+import animationData from "../lotties/mail.json";
 import "../styles/Contact.scss";
 
 function Contact() {
@@ -14,12 +15,16 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-const serviceId = "service_6mgaapt";
-const templateId = "template_74l8x3g";
-const publicKey = "c5ZVnBgpfN-AumguN";
+  const serviceId = "service_6mgaapt";
+  const templateId = "template_74l8x3g";
+  const publicKey = "c5ZVnBgpfN-AumguN";
 
   const sendEmail = (event) => {
-    alert("Message envoyé");
+    Swal.fire({
+      title: "Sended!",
+      text: "Message sent successfully!",
+      icon: "success",
+    });
     event.preventDefault();
 
     emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
@@ -52,7 +57,13 @@ const publicKey = "c5ZVnBgpfN-AumguN";
   };
 
   return (
-    <motion.section variants={textVariants} initial="initial" animate="animate" id="/contact" className={`contact ${theme}`}>
+    <motion.section
+      variants={textVariants}
+      initial="initial"
+      animate="animate"
+      id="/contact"
+      className={`contact ${theme}`}
+    >
       <div className="title">
         <h2 className="heading">Me Contacter</h2>
       </div>

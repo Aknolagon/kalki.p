@@ -64,22 +64,26 @@ function MyProjects() {
                 <h2>{projetsData[currentProject].title}</h2>
                 <p>{projetsData[currentProject].text}</p>
                 <div className="icon-url">
-                  <p
-                    href={projetsData[currentProject].url}
-                    target="_blank"
+                  <button
+                    onClick={() =>
+                      window.open(projetsData[currentProject].url, "_blank")
+                    }
+                    className="url-btn"
                     rel="noreferrer"
                     aria-label="Current Project image"
                   >
                     <GiEarthAsiaOceania />
-                  </p>
-                  <p
-                    href={projetsData[currentProject].github}
-                    target="_blank"
+                  </button>
+                  <button
+                    onClick={() =>
+                      window.open(projetsData[currentProject].github, "_blank")
+                    }
+                    className="url-btn"
                     rel="noreferrer"
                     aria-label="Current Project text"
                   >
                     <RiGithubFill />
-                  </p>
+                  </button>
                 </div>
               </div>
             </li>
